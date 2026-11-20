@@ -1,0 +1,1539 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mastry eComm Response</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Zilla+Slab:wght@400&family=DM+Mono&display=swap">
+<style>
+/* Layout: a horizontal deck of full-window pages. Each page scrolls on its own; a fixed pill at the bottom moves between pages. Single brand theme, as the design system defines one. */
+@font-face{font-family:"Have Heart One";src:url("fonts/HaveHeartOne.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+:root{
+  --surface-white:#ffffff; --surface-paper:#f7f5f1; --surface-sand:#efece2; --surface-charcoal:#2e2c2a; --surface-footer:#1a1917;
+  --ink:#232220; --ink-soft:#383633; --on-dark:#ffffff; --rule:#dad7ce;
+  --lime:#dbed61; --violet:#7120e5; --violet-300:#c4a4f2; --violet-200:#e1d1f9;
+  --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --slab:"Zilla Slab",Rockwell,Georgia,serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --logo:"Have Heart One","Brush Script MT",cursive;
+  --fs-headline:clamp(2.25rem,4.4vw,4rem); --fs-hero:clamp(3rem,7.4vw,6.5rem); --fs-lead:clamp(1.25rem,1.7vw,1.5rem); --fs-body:1.125rem; --fs-sm:.9375rem;
+  --r-sm:4px; --r-md:8px; --r-lg:12px; --r-pill:999px;
+  --dark:#232220; --dark-soft:#383633; --on-lime:#232220; --nav-bg:#232220; --nav-hover:#383633;
+  --pressed-bg:#383633; --pressed-fg:#dbed61; --pressed-dot:#dbed61; --show-light:block; --show-dark:none; --violet-100:#f1e9fd;
+  --thrive-logo:url("data:image/png;base64,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");
+  color-scheme:light;
+}
+/* Dark theme: follows the device unless the reader picks one with the button in the bar, which sets data-theme. */
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--surface-white:#1a1917; --surface-paper:#262422; --surface-sand:#34312e; --surface-charcoal:#3b3835; --ink:#f5f2ea; --ink-soft:#d8d4cb; --rule:#45413c; --violet:#8a4cf0; --violet-300:#b592f0; --violet-200:#3b2a66; --nav-bg:#3b3835; --nav-hover:#4d4945; --pressed-bg:#dbed61; --pressed-fg:#232220; --pressed-dot:#7120e5; --show-light:none; --show-dark:block; --violet-100:#2a2043; color-scheme:dark}}
+:root[data-theme="dark"]{--surface-white:#1a1917; --surface-paper:#262422; --surface-sand:#34312e; --surface-charcoal:#3b3835; --ink:#f5f2ea; --ink-soft:#d8d4cb; --rule:#45413c; --violet:#8a4cf0; --violet-300:#b592f0; --violet-200:#3b2a66; --nav-bg:#3b3835; --nav-hover:#4d4945; --pressed-bg:#dbed61; --pressed-fg:#232220; --pressed-dot:#7120e5; --show-light:none; --show-dark:block; --violet-100:#2a2043; color-scheme:dark}
+
+html,body{height:100%}
+body{background:var(--surface-white);color:var(--ink-soft);font-family:var(--sans);font-size:var(--fs-body);line-height:1.15;letter-spacing:-.01em;overflow:hidden;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box}
+h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit;letter-spacing:inherit}
+a{color:inherit}
+b{font-weight:600;color:var(--ink)}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+
+.deck{position:relative;height:100%;overflow:hidden}
+.track{display:flex;height:100%;transition:transform .5s cubic-bezier(.2,0,0,1)}
+@media (prefers-reduced-motion: reduce){.track{transition:none}}
+.page{flex:0 0 100%;min-width:0;height:100%;overflow-y:auto;background:var(--surface-white);color:var(--ink-soft);padding-block:clamp(20px,3vw,44px) 112px;padding-left:max(16px,env(safe-area-inset-left,0px),6vw);padding-right:max(16px,env(safe-area-inset-right,0px),6vw)}
+.inner{max-width:1376px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(24px,2.6vw,40px)}
+
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--rule);color:var(--ink)}
+.eyebrow,.kicker{font-family:var(--mono);font-size:.75rem;line-height:1.2;font-weight:400;text-transform:uppercase;letter-spacing:.04em;color:var(--ink)}
+.mark{display:inline-block;flex:none;font-size:1.75rem;height:.58em;width:2.534em;background:currentColor;-webkit-mask:var(--thrive-logo) center/contain no-repeat;mask:var(--thrive-logo) center/contain no-repeat;text-indent:-200vw;overflow:hidden;white-space:nowrap;line-height:1}
+.title{font-family:var(--sans);font-weight:400;font-size:var(--fs-headline);line-height:1;letter-spacing:-.03em;color:var(--ink);text-wrap:balance;max-width:20ch}
+.title .slab{font-family:var(--slab);letter-spacing:-.01em}
+.title.two-line{max-width:none}
+.title.two-line .slab{display:block}
+.lead{font-size:var(--fs-lead);line-height:1.12;max-width:52ch}
+h2,.h2{font-family:var(--sans);font-weight:400;font-size:clamp(1.5rem,2.3vw,2rem);line-height:1.02;letter-spacing:-.03em;color:var(--ink);text-wrap:balance}
+.muted{color:var(--ink-soft)}
+.small{font-size:var(--fs-sm)}
+.big{font-size:clamp(1.1875rem,1.5vw,1.375rem);line-height:1.12}
+.stack{display:flex;flex-direction:column;gap:12px;min-width:0}
+.grid{display:grid;gap:clamp(16px,2.2vw,32px)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr))}
+.g6{grid-template-columns:repeat(6,minmax(0,1fr))}
+@media (max-width:1180px){.g6{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.g6{grid-template-columns:1fr}}
+.top,.card{background:var(--surface-paper);border-radius:var(--r-lg);padding:clamp(18px,2vw,28px)}
+.top-thin{padding-top:16px;border-top:1px solid var(--rule)}
+.acid{background:var(--surface-charcoal);color:var(--on-dark);border-radius:var(--r-lg);padding:clamp(20px,2.4vw,32px)}
+.acid b,.acid .kicker{color:var(--on-dark)}
+.creamcard{background:var(--surface-paper);color:var(--ink-soft);border-radius:var(--r-lg);padding:clamp(20px,2.4vw,32px)}
+.jaa{background:var(--violet-200);color:var(--ink)}
+.tbc{display:inline-block;background:var(--dark-soft);color:var(--lime);font-family:var(--mono);font-size:.6875rem;font-weight:400;letter-spacing:.04em;padding:3px 6px;border-radius:var(--r-sm);vertical-align:.12em;text-transform:uppercase;line-height:1.2}
+.rows{display:flex;flex-direction:column}
+.rows>*{padding:16px 0;border-top:1px solid var(--rule)}
+.rows>*:last-child{border-bottom:1px solid var(--rule)}
+.kv{display:flex;justify-content:space-between;gap:16px;align-items:baseline}.kv>b{flex:none;white-space:nowrap;text-align:right}.kv>span:first-child{min-width:0}.band .kv:has(>b)>span:first-child{flex:0 0 38%}
+.go{display:inline-flex;align-items:center;min-height:40px;padding:8px 24px;border-radius:var(--r-pill);background:var(--lime);color:var(--on-lime);font-size:.875rem;font-weight:500;line-height:1.1;text-decoration:none;align-self:flex-start;justify-self:start}
+.go:hover{background:var(--nav-bg);color:var(--lime)}
+
+/* full-bleed artwork pages */
+.block{display:flex;background-color:var(--surface-footer);background-size:cover;background-position:center;color:var(--on-dark)}
+.block .inner{flex:1;justify-content:space-between;gap:32px;width:100%;text-align:center;align-items:center}
+.block .num,.block .kicker{font-family:var(--mono);font-size:.75rem;font-weight:400;letter-spacing:.04em;text-transform:uppercase;color:var(--on-dark);align-self:flex-start}
+.block .mark{align-self:flex-start;color:var(--on-dark)}
+.marks{display:flex;align-items:center;gap:28px;align-self:flex-start;color:var(--on-dark)}
+.jaa-logo{height:44px;width:auto;display:block}
+.headmarks{display:inline-flex;align-items:center;gap:14px;flex:none}
+.head .jaa-logo{height:26px}
+.block .shout{font-family:var(--slab);font-weight:400;font-size:var(--fs-hero);line-height:1;letter-spacing:-.01em;color:var(--on-dark);text-wrap:balance}
+.block .lead{margin:0 auto;max-width:44ch}
+.block .stack{align-items:center}
+.block .stack:last-child{align-self:stretch;align-items:flex-start;text-align:left}
+.t-forest{background-image:linear-gradient(rgba(26,25,23,.32),rgba(26,25,23,.32)),url("art/ember-violet-teal.jpg")}
+.t-cream{background-image:linear-gradient(rgba(26,25,23,.32),rgba(26,25,23,.32)),url("art/teal-violet-ember.jpg")}
+.t-acid{background-image:linear-gradient(rgba(26,25,23,.32),rgba(26,25,23,.32)),url("art/amber-magenta-indigo.jpg")}
+.t-petrol{background-image:linear-gradient(rgba(26,25,23,.32),rgba(26,25,23,.32)),url("art/amber-violet-blue.jpg")}
+.t-plum{background-image:linear-gradient(rgba(26,25,23,.32),rgba(26,25,23,.32)),url("art/indigo-moss-magenta.jpg")}
+
+.has-video{position:relative}
+.bgvideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+.has-video::before{content:"";position:absolute;inset:0;background:rgba(26,25,23,.22);z-index:1;pointer-events:none}
+.has-video.deep::before{background:rgba(26,25,23,.42)}
+.has-video .inner{position:relative;z-index:2}
+
+/* seven questions */
+.qrow{display:grid;grid-template-columns:15rem 12rem minmax(0,1fr) auto;gap:8px 20px;align-items:center}
+@media (max-width:860px){.qrow{grid-template-columns:1fr}}
+
+/* tabs: inactive is a light pill, active is dark with a near-square corner */
+.tablist{display:flex;flex-wrap:wrap;gap:8px}
+[data-tab]{cursor:pointer;border:0;background:var(--surface-sand);color:var(--ink);padding:10px 16px;min-height:40px;font-family:var(--mono);font-size:.75rem;line-height:1.2;text-transform:uppercase;letter-spacing:.04em;text-align:left;border-radius:var(--r-pill)}
+[data-tab]:hover{background:var(--rule)}
+[data-tab][aria-pressed="true"],[data-tab][aria-pressed="true"]:hover{background:var(--pressed-bg);color:var(--pressed-fg);border-radius:var(--r-sm)}
+
+/* cues that the tabs can be selected: an arrow on each workstream, and a one-time nudge when the page first opens */
+.md [data-tab]{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.md [data-tab]::after{content:"\2192";font-family:var(--sans);font-size:1rem;line-height:1;transition:transform .2s}
+.md [data-tab]:hover::after{transform:translateX(4px)}
+.md [data-tab][aria-pressed="true"]::after{visibility:hidden}
+@keyframes nudge{0%,100%{transform:none;background:var(--surface-sand)}45%{transform:translateX(8px);background:var(--lime)}}
+@media (prefers-reduced-motion: no-preference){[data-tabs].nudge [data-tab][aria-pressed="false"]{animation:nudge .7s ease-in-out;animation-delay:calc(var(--i,0) * 90ms + 600ms)}}
+
+/* the universal cue: a violet dot on anything that can be selected */
+[data-tab]{display:inline-flex;align-items:center;gap:8px}
+.go{gap:8px}
+[data-tab]::before,.go::before,.dot{content:"";flex:none;display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--violet)}
+[data-tab][aria-pressed="true"]::before{background:var(--pressed-dot)}.go:hover::before{background:var(--lime)}
+.md [data-tab]{justify-content:flex-start}
+.md [data-tab]::after{margin-left:auto}
+
+/* how-to page */
+.keys{display:flex;gap:8px}
+.key{width:56px;height:56px;border:0;border-radius:var(--r-md);background:var(--surface-sand);color:var(--ink);font-family:var(--sans);font-size:1.5rem;line-height:1;box-shadow:inset 0 -4px 0 var(--rule);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.key:hover{background:var(--rule)}
+.mini{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;background:var(--nav-bg);color:var(--on-dark);border-radius:var(--r-pill);padding:12px 18px;font-size:.875rem;font-weight:500}
+.mini svg{width:14px;height:14px}
+
+/* enterprise vs SMB */
+.stages{display:grid;grid-template-columns:9.5rem repeat(6,minmax(0,1fr));gap:8px}
+.stages .lane{padding:16px;background:var(--surface-sand);border-radius:var(--r-lg);font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink)}
+.stages .cell{padding:16px;background:var(--surface-paper);border-radius:var(--r-lg);font-size:var(--fs-sm);color:var(--ink);outline:2px solid transparent;outline-offset:-2px}
+.stages .smb{background:var(--violet-200);color:var(--ink)}
+.stages .cell.on{outline-color:var(--ink)}
+.phone-only{display:none}
+.phone-only .acid{background:var(--violet-200);color:var(--ink)}
+.phone-only .acid b{color:var(--ink)}
+@media (max-width:900px){
+  .stages{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stages .desk-only{display:none}
+  .phone-only{display:grid}
+}
+
+/* master and detail */
+.md{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:clamp(20px,3vw,32px);align-items:start}
+.md .tablist{flex-direction:column;flex-wrap:nowrap}
+@media (min-width:861px){.md [data-tab]{white-space:nowrap}}
+@media (max-width:860px){.md{grid-template-columns:1fr}}
+
+/* funnel */
+.funnel{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
+.funnel .step{flex:1 1 180px;background:var(--surface-paper);border-radius:var(--r-lg);padding:20px;display:flex;flex-direction:column;gap:6px}
+.funnel .rate{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;flex:0 0 auto;color:var(--ink)}
+
+/* timeline */
+.hscroll{overflow-x:auto}
+.gantt{display:grid;grid-template-columns:20rem repeat(6,minmax(64px,1fr));row-gap:8px;min-width:780px}
+.gantt .mh{padding:10px 0;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink)}
+.gantt .lab{grid-column:1;padding:8px 12px 8px 0;font-size:var(--fs-sm);color:var(--ink)}
+.gantt .bar{height:24px;align-self:center;background:var(--violet-300);border-radius:var(--r-pill)}
+.gantt .bar.jaa{background:var(--violet)}
+
+/* who runs what, over three stages */
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:var(--fs-sm);color:var(--ink)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{display:inline-block;width:16px;height:16px;border-radius:var(--r-sm)}
+.chgkey{background:var(--surface-white);outline:2px solid var(--ink);outline-offset:-2px}
+.layerhead{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline}
+.owngrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+@media (max-width:1000px){.owngrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.own{border-radius:var(--r-lg);padding:14px;min-height:104px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;font-size:var(--fs-sm);line-height:1.1}
+@media (max-width:820px){.owngrid{grid-template-columns:1fr}.own{min-height:0;flex-direction:row;align-items:center;padding:14px 16px}.own .who{text-align:right;flex:none;max-width:45%}}
+.own b{color:inherit}
+.own .who{font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em}
+.o-t{background:var(--surface-sand);color:var(--ink)}
+.o-s{background:var(--violet-200);color:var(--ink)}
+.o-m{background:var(--violet);color:var(--on-dark)}
+.o-j{background:var(--surface-charcoal);color:var(--on-dark)}
+.own.chg{outline:2px solid currentColor;outline-offset:-6px}
+
+/* page 20 builds one stage at a time; everything is visible without it */
+button.go{border:0;cursor:pointer;font-family:inherit}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes pop{50%{transform:scale(1.06)}}
+@media (prefers-reduced-motion: no-preference){
+  .building .layerhead,.building .layerhead + p{animation:rise .5s ease both;animation-delay:var(--d,0s)}
+  .building .own{animation:rise .45s ease both;animation-delay:calc(var(--d,0s) + .3s + var(--c,0) * 70ms)}
+  .building .own.chg{animation:rise .45s ease calc(var(--d,0s) + .3s + var(--c,0) * 70ms) both,pop .5s ease calc(var(--d,0s) + 1.3s)}
+}
+@media (prefers-reduced-motion: reduce){#replayBuild{display:none}}
+
+/* people, with a space for each photo */
+.person{display:flex;gap:16px;align-items:flex-start;background:var(--violet-100);color:var(--ink);border-radius:var(--r-lg);padding:16px;min-width:0}
+.person.jaa{background:var(--violet-200);color:var(--ink)}
+.photo{flex:none;width:96px;aspect-ratio:1;border-radius:var(--r-lg);background:var(--surface-sand);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em}
+.person.jaa .photo{background:var(--surface-white)}
+img.photo{object-fit:cover;display:block;height:auto}
+.mark.agency-logo{font-size:2.75rem;color:var(--ink);align-self:flex-start}
+.jaa-logo.agency-logo{height:48px;color:var(--ink);align-self:flex-start}
+.people{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:980px){.people{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.people{grid-template-columns:1fr}}
+
+/* the 3D funnel and the notes beside it */
+.f3d{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-rows:560px;height:560px}
+#f3dCanvas{width:100%;height:560px;min-height:0;display:block;touch-action:pan-y}
+.f3d-notes{position:relative;min-width:0}
+.f3d-note{position:absolute;left:0;right:0;transform:translateY(-50%);display:flex;flex-direction:column;gap:4px;padding:10px 16px;border-radius:var(--r-lg);transition:background .2s}
+.f3d-note.on{background:var(--surface-paper)}
+@media (max-width:820px){
+  .f3d{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
+  #f3dCanvas{height:380px}
+  .f3d-notes{display:flex;flex-direction:column;gap:6px}
+  .f3d-note{position:static;transform:none;background:var(--surface-paper)}
+}
+
+/* the long tail chart: width is the number of businesses, height is average staff */
+.tail{margin:0;display:flex;flex-direction:column;gap:12px}
+.tail-plot{display:grid;grid-template-columns:36px minmax(0,1fr)}
+.tail-y{position:relative;height:300px;font-family:var(--mono);font-size:.6875rem;color:var(--ink-soft)}
+.tail-y span{position:absolute;right:8px;transform:translateY(50%)}
+.tail-area{position:relative;min-width:0}
+.tail-chart{position:relative;height:300px;border-bottom:1px solid var(--ink-soft)}
+.tail-chart .gl{position:absolute;left:0;right:0;border-top:1px solid var(--surface-sand)}
+.tail-bars{position:absolute;inset:0;display:flex;align-items:flex-end;gap:2px}
+.tb{flex-basis:0;min-width:0;background:var(--bc,var(--violet));border-radius:4px 4px 0 0;outline:2px solid transparent;outline-offset:2px}
+[data-b="0"],.band0{--bc:var(--violet)}[data-b="1"],.band1{--bc:#9c63ec}[data-b="2"],.band2{--bc:#c4a4f2}
+.band{box-shadow:inset 0 10px 0 var(--bc);padding-top:calc(clamp(18px,2vw,28px) + 10px)}
+.tl b::before,.band>.kicker::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--bc);margin-right:8px}
+.tot{display:flex;flex-direction:column;gap:16px}.tot-nums{display:flex;flex-wrap:wrap;gap:20px clamp(32px,5vw,80px)}.tot{padding-block:clamp(20px,2.4vw,32px);border-block:1px solid var(--rule)}.tot-nums div{display:flex;flex-direction:column;gap:4px}.tot-n{white-space:nowrap;font-size:clamp(2.25rem,4.3vw,4rem);line-height:1.05;font-weight:500;letter-spacing:-.01em}
+@media(max-width:820px){.row-pre .grid,.row-post .grid{grid-template-columns:1fr}}
+.row-pre .card{background:var(--violet-200)}.row-post .card{background:var(--violet);color:var(--on-dark)}.row-post .card b,.row-post .card .kicker{color:var(--on-dark)}
+.row-pre>.kicker::before,.row-post>.kicker::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;background:var(--violet-300)}.row-post>.kicker::before{background:var(--violet)}
+.cmp{display:flex;flex-direction:column}.cmp-h,.cmp-r{display:grid;grid-template-columns:88px minmax(0,1fr) minmax(0,1fr);gap:20px;padding:14px 0;border-top:1px solid var(--rule)}.cmp-h{border-top:0;padding-top:0}.cmp-r:last-child{border-bottom:1px solid var(--rule)}
+@media(max-width:820px){.cmp-h{display:none}.cmp-r{grid-template-columns:1fr;gap:6px}.cmp-r span::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}}
+.brandlogo{width:auto;align-self:flex-start;margin-bottom:8px}
+.sp{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,3vw,40px);align-items:start}.sp .g3,.sp .g2{grid-template-columns:1fr}.sp .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.slidefig{margin:0;display:flex;flex-direction:column;gap:8px}.slidefig figcaption{font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
+.slidebtn{display:block;padding:0;border:1px solid var(--rule);border-radius:var(--r-md);overflow:hidden;background:none;cursor:zoom-in;width:100%}.slidebtn img{display:block;width:100%;height:auto}.slidebtn:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+#zoom{border:0;padding:0;background:transparent;max-width:min(94vw,1440px);width:100%}#zoom::backdrop{background:rgba(26,25,23,.82)}#zoom img{display:block;width:100%;height:auto;border-radius:var(--r-md);cursor:zoom-out}
+@media(max-width:820px){.sp{grid-template-columns:1fr}}
+.shots-host,.shots{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:820px){.shots-host,.shots{grid-template-columns:1fr}}
+.h4h-shots{display:flex;flex-direction:column}.slidebtn.fit img{aspect-ratio:4/3;object-fit:cover;object-position:top left}
+#zoom img{max-height:90vh;width:auto;max-width:100%;margin:0 auto}
+.shots{grid-column:1/-1;gap:clamp(16px,2vw,28px)}
+.fork{position:relative}
+.fork-heads{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-bottom:1px solid var(--rule)}
+.fork-heads [data-tab],.fork-heads [data-tab]:hover,.fork-heads [data-tab][aria-pressed="true"],.fork-heads [data-tab][aria-pressed="true"]:hover{background:none;border-radius:0;color:var(--ink-soft);display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:12px 12px 14px;font-family:var(--sans);font-size:var(--fs-sm);text-transform:none;letter-spacing:0;line-height:1.15;text-align:left;border-bottom:2px solid transparent;margin-bottom:-1px}
+.fork-heads [data-tab]::before{display:none}
+.fork-heads .rn{font-family:var(--mono);font-size:.75rem;display:inline-flex;align-items:center;gap:6px}
+.fork-heads .rn::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--violet)}
+.fork-heads [data-tab]:hover{color:var(--ink)}
+.fork-heads [data-tab][aria-pressed="true"],.fork-heads [data-tab][aria-pressed="true"]:hover{background:var(--pressed-bg);color:var(--pressed-fg);font-weight:600;border-radius:var(--r-md) var(--r-md) 0 0;border-bottom-color:var(--ink)}
+.fork-heads [data-tab][aria-pressed="true"] .rn::before{background:var(--pressed-dot)}
+.fork-lines{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.fork-lines path{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fork-lines circle{fill:var(--ink)}
+.fork-steps{list-style:none;margin:0;padding:72px 0 12px;display:flex;gap:clamp(16px,2.4vw,36px)}
+.fork-steps li{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:8px;font-size:var(--fs-body);line-height:1.2;color:var(--ink)}
+.fork-steps .who{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
+.fork-steps .sw{width:10px;height:10px;border-radius:2px}.fork-steps .sw.o-t{box-shadow:0 0 0 1px var(--ink-soft)}
+.fork-steps:not([hidden]) li{animation:rise .4s ease both;animation-delay:calc(var(--n,0) * 60ms)}
+@media (prefers-reduced-motion: reduce){.fork-steps li{animation:none!important}}
+@media(max-width:900px){.fork-heads{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;border-bottom:0}.fork-heads [data-tab]{padding-bottom:8px}.fork-lines{display:none}.fork-steps{flex-direction:column;gap:0;padding:20px 0 0;margin-left:5px;border-left:1.5px solid var(--ink)}.fork-steps li{position:relative;padding:0 0 22px 22px}.fork-steps li:last-child{padding-bottom:0}.fork-steps li::before{content:"";position:absolute;left:0;top:6px;width:14px;border-top:1.5px solid var(--ink)}}
+.palewin{background:var(--violet-200);color:var(--ink)}.palewin h2,.palewin p,.palewin .kicker{color:var(--ink)}
+.gs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:36px 0}
+.gs li{position:relative;border-top:1.5px solid var(--ink);padding:22px 22px 0 0;display:flex;flex-direction:column;gap:10px;font-size:var(--fs-sm);line-height:1.2}
+.gs li::before{content:"";position:absolute;left:0;top:-5.5px;width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.gs li:last-child{border-top-color:transparent;background:linear-gradient(90deg,var(--ink) 0,var(--ink) 40%,transparent 40%) top left/100% 1.5px no-repeat}
+.gs .gs-n{font-family:var(--mono);font-size:.75rem;color:var(--ink-soft)}
+.gs .gs-out{margin-top:auto;padding-top:10px;display:flex;flex-direction:column;gap:4px;color:var(--ink)}
+@media(max-width:1100px){.gs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.gs{grid-template-columns:1fr;gap:0;margin-left:5px;border-left:1.5px solid var(--ink)}.gs li,.gs li:last-child{border-top:0;background:none;padding:0 0 28px 24px}.gs li:last-child{padding-bottom:0}.gs li::before{left:-6px;top:3px}}
+.page.opp{background:#24104f;color:#fff}
+.opp .inner{gap:clamp(28px,3.4vw,52px)}
+.opp .head{border-bottom-color:rgba(255,255,255,.28)}
+.opp .eyebrow,.opp .mark,.opp .jaa-logo,.opp .kicker,.opp b,.opp h1,.opp p,.opp span{color:#fff}
+.opp-n{font-family:var(--sans);font-weight:500;font-size:clamp(3.25rem,11.5vw,11rem);line-height:.92;letter-spacing:-.035em;margin:0;white-space:nowrap}
+.opp .opp-lead{max-width:60ch;font-size:var(--fs-lead);line-height:1.2;margin-top:6px}
+.opp .opp-src{font-size:.8125rem;line-height:1.35;max-width:110ch;color:rgba(255,255,255,.78)}.opp .opp-src a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.opp-bar{display:flex;gap:4px;height:clamp(44px,6vw,84px)}
+.opp-bar i{flex-basis:0;border-radius:var(--r-sm);transform-origin:left center}
+.opp-keys{display:flex;gap:4px;margin-top:14px}
+.opp-keys div{flex-basis:0;min-width:0;display:flex;flex-direction:column;gap:3px;padding-right:12px;font-size:var(--fs-sm);line-height:1.2}
+.opp-keys b{font-size:clamp(1.125rem,1.8vw,1.625rem);font-weight:600;line-height:1.1}
+.opp .opp-sub{color:rgba(255,255,255,.72)}
+.opp-ext{display:flex;flex-direction:column;gap:16px}
+.opp-track{height:clamp(22px,2.6vw,34px);border-radius:var(--r-sm);background:rgba(255,255,255,.12);overflow:hidden}
+.opp-track i{display:block;width:7.45%;height:100%;background:var(--lime);border-radius:var(--r-sm);transform-origin:left center}
+.opp-extcopy{display:flex;flex-wrap:wrap;gap:8px 32px;align-items:baseline}
+.opp .opp-n2{color:var(--lime);font-size:clamp(2rem,5vw,4.25rem);font-weight:500;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.opp-extcopy p{flex:1 1 340px;max-width:62ch;font-size:var(--fs-body);line-height:1.25}
+.opp-foot{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.28);padding-top:clamp(18px,2vw,28px)}
+.opp-stats{display:flex;flex-wrap:wrap;gap:16px clamp(24px,4vw,64px)}
+.opp-stats div{display:flex;flex-direction:column;gap:2px;font-size:var(--fs-sm)}
+.opp-stats b{font-size:clamp(1.25rem,2vw,1.75rem);font-weight:600;line-height:1.1}
+.opp.playing .opp-n,.opp.playing .opp-n2{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.opp.playing .opp-n2{animation-delay:1.25s}
+.opp.playing .opp-bar i{animation:oppgrow .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.35s + var(--n) * .22s)}
+.opp.playing .opp-keys div{animation:rise .5s ease both;animation-delay:.9s}
+.opp.playing .opp-track i{animation:oppgrow .7s cubic-bezier(.2,.7,.2,1) 1.2s both}
+@keyframes oppgrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion: reduce){.opp.playing *{animation:none!important}}
+@media(max-width:700px){.opp-bar{height:40px}.opp-keys{flex-direction:column;gap:14px}.opp-keys div{flex:none}.opp-keys div::before{content:"";width:28px;height:6px;border-radius:2px;background:var(--k)}}
+.cisco-win{background:var(--violet);color:var(--on-dark)}.cisco-win b,.cisco-win .kicker,.cisco-win h2,.cisco-win p{color:var(--on-dark)}
+.tb.on,.tb:focus-visible{outline-color:var(--ink)}
+.tail-line{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.tail-line path{fill:none;vector-effect:non-scaling-stroke;stroke-linecap:round}
+.tail-line .halo{stroke:var(--surface-white);stroke-width:5}
+.tail-line .ln{stroke:var(--ink);stroke-width:1.75;stroke-dasharray:6 5}
+.tp{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 2px var(--surface-white);transform:translate(-50%,50%);pointer-events:none}
+.tl{position:absolute;display:flex;flex-direction:column;gap:2px;font-size:var(--fs-sm);color:var(--ink-soft);padding:6px 8px;border-radius:var(--r-md)}
+.tl.on{background:var(--surface-paper)}
+.tail-x{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 24px;padding-left:36px;font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
+.tail figcaption{padding-left:36px;font-size:var(--fs-sm);color:var(--ink-soft)}
+@media (max-width:760px){
+  .tail-y,.tail-chart{height:220px}
+  .tl{position:static;padding:8px 0 0}
+  .tail-x,.tail figcaption{padding-left:0}
+}
+
+/* fixed navigation */
+.marker{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:0 max(16px,env(safe-area-inset-right,0px),2vw) calc(22px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px),2vw);font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em;pointer-events:none;color:var(--marker,var(--ink))}
+.docnav{position:absolute;left:50%;bottom:calc(10px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;align-items:center;gap:2px;background:var(--nav-bg);color:var(--on-dark);border-radius:var(--r-pill);padding:4px;max-width:calc(100% - 32px);z-index:5}
+.docnav button{background:none;border:0;color:var(--on-dark);cursor:pointer;min-width:44px;min-height:44px;border-radius:var(--r-pill);display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 10px}
+.docnav button:hover{background:var(--nav-hover)}
+.docnav button:disabled{opacity:.35;cursor:default}
+.docnav button:disabled:hover{background:none}
+.docnav svg{width:16px;height:16px;flex:none}
+.docnav .trigger{font-size:.875rem;font-weight:500;max-width:min(46vw,300px)}
+.docnav .trigger span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.docnav .count{font-family:var(--mono);font-size:.75rem;padding:0 6px;white-space:nowrap}
+.menu{position:absolute;left:50%;bottom:calc(66px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(400px,calc(100% - 32px));max-height:60%;overflow-y:auto;background:var(--nav-bg);color:var(--on-dark);border-radius:var(--r-lg);padding:8px;z-index:6;display:flex;flex-direction:column}
+.menu button{background:none;border:0;color:var(--on-dark);cursor:pointer;text-align:left;padding:9px 12px;min-height:40px;display:flex;align-items:baseline;gap:12px;font-size:.875rem;border-radius:var(--r-md)}
+.menu button:hover{background:var(--nav-hover)}
+.menu button .n{font-family:var(--mono);font-size:.75rem;flex:0 0 1.75em}
+.menu button.sec{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;margin-top:6px}
+.menu button[aria-current="true"]{background:var(--lime);color:var(--on-lime);border-radius:var(--r-sm)}
+@media (max-width:700px){.marker{display:none}}
+
+/* editing copy in place */
+.docnav .edit{font-size:.875rem;font-weight:500;padding:0 14px}
+.docnav .save,.docnav .save:hover{background:var(--lime);color:var(--on-lime)}
+.docnav.can-edit .trigger{max-width:min(32vw,300px)}
+.docnav.is-editing .trigger,.docnav.is-editing .count{display:none}
+.editing [data-edit]{outline:1px dashed currentColor;outline-offset:4px;border-radius:2px;cursor:text}
+.editing [data-edit]:focus{outline:2px solid currentColor}
+.backdemo{background:var(--lime);color:var(--on-lime)}.mini svg{width:16px;height:16px}
+.docnav .backbtn{position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);display:inline-flex;align-items:center;gap:8px;min-width:0;min-height:44px;padding:8px 18px;border:0;border-radius:var(--r-pill);background:var(--lime);color:var(--on-lime);font-size:.875rem;font-weight:500;cursor:pointer;white-space:nowrap}.docnav .backbtn:hover{background:var(--lime)}.docnav .backbtn[hidden]{display:none}
+@media(max-width:900px){.docnav .backbtn{left:50%;top:auto;bottom:calc(100% + 8px);transform:translateX(-50%);max-width:calc(100vw - 32px);overflow:hidden}.docnav .backbtn span{overflow:hidden;text-overflow:ellipsis}}
+.toast{position:absolute;left:50%;bottom:calc(72px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--nav-bg);color:var(--on-dark);padding:10px 18px;border-radius:var(--r-pill);font-size:.875rem;z-index:7;max-width:calc(100% - 32px);text-align:center}
+</style>
+
+<div class="deck" id="deck">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="jaaLogo" viewBox="-3.57628e-7 13.9542 106.6 53.05"><path d="M104.064 22.269C102.565 22.4564 101.066 22.269 99.6607 21.8942C98.349 21.5195 97.2248 20.8637 96.1942 20.1142C95.2574 19.4584 94.2268 19.1773 93.1962 19.271C92.1657 19.3647 91.0414 19.5521 90.0109 19.8331C88.6993 20.2079 87.3876 20.77 86.076 21.2384C85.4202 21.5195 84.8581 21.8005 83.9212 21.6132C84.3897 20.6763 85.1392 20.2079 85.8886 19.8331C86.7318 19.4584 87.4813 19.1773 88.2308 18.7089C88.5119 18.5215 88.6993 18.0531 88.8866 17.772C88.1371 17.0225 87.3876 17.0225 86.5445 17.0225C85.9823 17.3036 85.3265 17.6783 84.6707 18.0531C84.1086 18.3341 83.5465 18.7089 82.9844 18.8962C80.6422 19.5521 78.3 20.3015 75.8641 20.6763C72.6788 21.1447 69.3997 21.2384 67.3386 18.0531C67.1512 17.772 66.8702 17.6783 66.5891 17.4909C66.7765 16.9288 66.8702 16.6478 66.8702 16.273C65.7459 14.9614 65.0901 14.6803 63.4038 14.8677C62.6543 15.6172 61.9048 16.4604 61.1553 17.3036C60.4058 18.1467 59.5626 18.9899 59.0005 19.9268C58.4383 20.77 57.7825 21.3321 56.8457 21.6132C53.3792 22.6437 50.0065 23.6743 46.5401 24.7048C45.8843 24.8922 45.2285 25.1733 44.479 24.7985C44.76 21.8942 45.1348 19.1773 46.4464 16.3667C46.1653 15.7109 45.8843 14.8677 45.4158 14.3056C45.0411 13.8371 44.3853 13.8371 43.7295 14.3056C42.98 18.1467 43.0737 22.1753 41.9494 25.9228C41.5747 26.0165 41.3873 26.1101 41.1999 26.2038C34.1734 27.8902 27.0532 29.1081 19.933 30.045C16.4665 30.5134 13.0938 31.1692 9.90845 32.6682C6.72309 34.0735 3.81879 35.8536 1.66398 38.7579C-0.303444 41.3811 -0.490818 44.0044 0.914488 46.9087C1.85136 48.7824 2.78823 50.5625 3.81879 52.3425C6.72309 57.4016 10.6579 61.5239 15.436 64.7092C18.1529 66.583 21.2446 67.3325 24.6173 66.864C27.0532 66.4893 29.3954 65.6461 31.5502 64.5218C32.9555 63.7723 34.4545 63.0228 35.485 61.7112C37.2651 59.4627 38.6704 57.0269 39.5136 54.3099C40.7315 50.2814 41.6684 46.1592 42.2305 42.0369C42.8863 37.821 43.261 33.6051 43.8232 29.2955C43.8232 28.6397 44.0105 28.0776 44.1042 27.4218C48.4138 26.0165 52.6297 24.7048 56.9394 23.2995C57.2204 24.4238 57.3141 25.7354 59.0005 25.6417C60.3121 24.9859 61.53 24.1427 62.5606 23.0185C63.5911 21.8942 64.6217 20.6763 65.9333 19.271C66.3081 19.7394 66.4954 20.1142 66.7765 20.4889C68.0881 22.1753 69.9619 22.9248 72.023 22.9248C73.4283 22.9248 74.7399 22.8311 76.1452 22.6437C77.6442 22.4564 79.2369 22.0816 80.7359 21.8005C81.1106 22.4564 81.3917 23.1122 81.7664 23.768C82.2349 23.9553 82.6096 24.1427 83.3591 24.3301C84.8581 23.8617 86.2634 23.2995 87.7624 22.8311C88.9803 22.3627 90.2919 21.9879 91.5099 21.6132C92.8215 21.2384 94.1331 21.3321 95.351 22.0816C98.6301 24.1427 102.19 24.3301 105.938 24.4238C106.219 24.049 106.406 23.6743 106.593 23.3932C105.844 22.3627 104.907 22.4564 103.97 22.55L104.064 22.269ZM41.6684 28.9208C41.3873 31.4503 41.1999 33.8862 40.8252 36.4157C40.3567 39.9758 39.8883 43.5359 39.4199 47.096C38.9514 50.3751 38.1082 53.5605 36.7029 56.4648C35.5787 58.8069 34.0797 60.868 31.4565 61.8986C29.7701 62.5544 28.1774 63.4913 26.21 64.5218C25.5542 64.7092 24.5236 65.084 23.3994 65.1777C22.2751 65.2713 21.1509 65.365 20.0266 65.1777C17.7782 64.7092 15.8107 63.585 14.0307 62.1797C10.0958 58.9943 7.09783 55.0594 4.66197 50.6562C3.91247 49.2509 3.25666 47.8455 2.69454 46.3465C1.85136 44.3791 2.03873 42.5054 3.06929 40.538C4.28722 38.1958 6.25465 36.6968 8.40945 35.3852C10.8453 33.9799 13.5622 32.9493 16.3729 32.4809C20.1203 31.8251 23.9615 31.2629 27.709 30.6071C31.1754 30.045 34.6418 29.5766 38.0146 28.546C39.0451 28.1713 40.2631 28.1713 41.481 27.9839C41.481 28.4523 41.481 28.7334 41.481 29.0144L41.6684 28.9208ZM63.1227 19.0836C63.4038 18.1467 63.4974 18.1467 64.2469 17.3036C64.4343 18.1467 63.7785 18.5215 63.1227 19.0836ZM64.3406 17.3036C64.6217 17.1162 64.9027 16.9288 65.0901 16.8351C65.0901 17.4909 64.7154 17.4909 64.3406 17.3036Z" fill="currentColor"/></symbol></svg>
+<div class="track" id="track">
+
+<section class="page block t-forest has-video" data-id="cover" data-title="Cover">
+<video id="coverVideo" class="bgvideo" src="media/cover.mp4" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video>
+<div class="inner">
+<div class="marks"><span class="mark" style="font-size:2.75rem">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></div>
+<div class="stack" style="gap:20px">
+<h1 class="shout">Taking Mastry to SMBs.</h1>
+<p class="lead">Our response to the Mastry eComm agency briefing i.e. how we'd help, where we've done it before and what we'd need from you. Paid media is with JAA, our media partner.</p>
+</div>
+<div class="stack" style="gap:6px">
+<div class="kicker">Prepared by Thrive and JAA for Multiverse · November 2026</div>
+<div class="small">Use the arrows below, or the arrow keys, to move through the pages. The menu between them jumps to any page.</div>
+</div>
+</div>
+</section>
+
+<section class="page" data-id="how-to-use" data-title="How to use this document">
+<div class="inner">
+<div class="head"><span class="eyebrow">Before you start</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">How to <span class="slab">use this document.</span></h1>
+<p class="lead">This is a document to read at your own pace. It moves page by page, and a lot of it can be selected to show more.</p>
+<div class="grid g4">
+<div class="card stack" style="gap:16px">
+<div class="kicker">Move between pages</div>
+<div class="keys"><button type="button" class="key" data-go="-1" aria-label="Previous page">&larr;</button><button type="button" class="key" data-go="1" aria-label="Next page">&rarr;</button></div>
+<p>Use the arrow keys on your keyboard, or the arrows in the bar at the bottom. On a phone, swipe left or right.</p>
+</div>
+<div class="card stack" style="gap:16px">
+<div class="kicker">Jump to any page</div>
+<div class="mini" aria-hidden="true">Page name<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></div>
+<p>The page name in the middle of the bar opens a list of every page. Each page has its own link, so you can send someone straight to it.</p>
+</div>
+<div class="card stack" style="gap:16px">
+<div class="kicker">Go back after a jump</div>
+<div class="mini backdemo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h9a5 5 0 0 1 0 10h-3"/></svg>Back to</div>
+<p>When a link takes you several pages on, a 'Back to' button appears beside the bar. It returns you to the page you came from.</p>
+</div>
+<div class="card stack" style="gap:16px" data-tabs>
+<div class="kicker">Look for the dot</div>
+<div class="tablist"><button type="button" data-tab="a" aria-pressed="true">Like this</button><button type="button" data-tab="b" aria-pressed="false">Or this</button></div>
+<p data-panel="a">Anything with a violet dot <span class="dot" aria-hidden="true"></span> can be selected, and there's more behind it. Try the other one.</p>
+<p data-panel="b" hidden>That's all there is to it. You'll find these on the diagrams, the examples and the workstreams.</p>
+</div>
+</div>
+<p class="muted">Some pages are longer than the screen. Scroll down to see the rest.</p>
+<div class="stack card cisco-win" style="gap:10px"><div class="kicker">A note on the numbers</div><p>The figures, timings and projections in this document are indicative. They're our estimates from published data and from what we know so far, and they're there to show how we're thinking. The real numbers come from the work itself, once we've seen the product and your data.</p></div>
+</div>
+</section>
+
+<section class="page opp" data-id="the-opportunity" data-title="The opportunity">
+<div class="inner">
+<div class="head"><span class="eyebrow">The opportunity</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<div class="stack" style="gap:10px">
+<div class="kicker">UK businesses with 1 to 249 employees · training investment per year · our estimate</div>
+<h1 class="opp-n">c.£25.5 billion</h1>
+<p class="opp-lead">This is what small and mid-size businesses in the UK invest in training their people each year. It's spread across three sizes of business, and the two smaller ones account for most of it.</p>
+</div>
+<div class="opp-chart">
+<div class="opp-bar" role="img" aria-label="The £25.5 billion split across three sizes of business: mid-size £5.8 billion, small £9.9 billion, micro £9.8 billion">
+<i style="flex-grow:5.8;background:#8a4cf0;--n:0"></i><i style="flex-grow:9.9;background:#b592f0;--n:1"></i><i style="flex-grow:9.8;background:#e1d1f9;--n:2"></i>
+</div>
+<div class="opp-keys">
+<div style="flex-grow:5.8;--k:#8a4cf0"><b>c.£5.8 billion</b><span>Mid-size · 50 to 249 employees</span><span class="opp-sub">39,000 businesses</span></div>
+<div style="flex-grow:9.9;--k:#b592f0"><b>c.£9.9 billion</b><span>Small · 10 to 49 employees</span><span class="opp-sub">225,000 businesses</span></div>
+<div style="flex-grow:9.8;--k:#e1d1f9"><b>c.£9.8 billion</b><span>Micro · 1 to 9 employees</span><span class="opp-sub">1.2 million businesses</span></div>
+</div>
+</div>
+<div class="opp-ext">
+<div class="opp-track" aria-hidden="true"><i></i></div>
+<div class="opp-extcopy"><b class="opp-n2">c.£1.9 billion</b><p>is what these businesses pay to external training providers, shown here to scale against the total. About half of the total is the wages of people while they train, so for a product that businesses pay for, like Mastry, this is the number we'd work from.</p></div>
+</div>
+<div class="opp-foot">
+<div class="opp-stats"><div><b>1.46 million</b><span>businesses</span></div><div><b>12.5 million</b><span>people employed</span></div><div><b>3</b><span>segments, each buying training in a different way</span></div></div>
+<a class="go" href="#which-smbs">See the three segments and our sources</a>
+</div>
+<p class="opp-src">Sources: <a href="https://www.gov.uk/government/statistics/business-population-estimates-2026/business-population-estimates-for-the-uk-and-regions-2026-statistical-release" target="_blank" rel="noopener">Business population estimates for the UK and regions 2026</a> (GOV.UK) for the number of businesses and people employed, and the <a href="https://assets.publishing.service.gov.uk/media/69205d2db303fcb3352e5347/Employer_skills_survey_2024_full_UK_research_report.pdf" target="_blank" rel="noopener">Employer Skills Survey 2024</a> (Department for Education) for training investment per employee. The £ figures are our estimates from the two and not published figures.</p>
+</div>
+</section>
+
+<section class="page" data-id="summary-of-fit" data-title="Summary of fit">
+<div class="inner">
+<div class="head"><span class="eyebrow">Summary of fit</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title two-line">Seven questions to answer, <span class="slab">three jobs to do.</span></h1>
+<p class="lead">We can help you answer all seven questions in the brief. While the brief lists seven, for us it comes down to three jobs, and they're jobs we've done before.</p>
+<div class="grid g3">
+<div class="stack top">
+<div class="kicker">Job 1 · Strategy</div>
+<h2>Reposition Mastry for SMBs</h2>
+<p>What Mastry is for a small business when there's no sales team to explain it, who it's for and how it's priced.</p>
+<p class="muted">Where we've done it: Cisco Designed. JAA works with us on audience.</p>
+<a class="go" href="#job-1">Go to job 1</a>
+</div>
+<div class="stack top">
+<div class="kicker">Job 2 · Orchestration, Production</div>
+<h2>Build the means to sell and support it</h2>
+<p>The self-serve journey in the product, the website and commerce behind it, and the support model around it.</p>
+<p class="muted">Where we've done it: Grantify, Help for Heroes</p>
+<a class="go" href="#job-2">Go to job 2</a>
+</div>
+<div class="stack top">
+<div class="kicker">Job 3 · Activation, Management, Optimisation</div>
+<h2>Attract, convert, then scale</h2>
+<p>Launch it to the right SMBs, run it until it's steady and hand a working programme to your team.</p>
+<p class="muted">Where we've done it: Grantify, with JAA on media</p>
+<a class="go" href="#job-3">Go to job 3</a>
+</div>
+</div>
+<div class="acid big">Being honest, the one thing we won't do is build inside Mastry itself. We'll design the self-serve changes and work alongside your product team, but <b>it's your product team that will build the platform changes.</b></div>
+</div>
+</section>
+
+<section class="page" data-id="your-seven-questions" data-title="Your seven questions">
+<div class="inner">
+<div class="head"><span class="eyebrow">Summary of fit</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Your <span class="slab">seven questions.</span></h1>
+<p class="lead">The brief asks which questions we can help answer and which we can't. We can help with all seven, although two of them (02 and 06) come with a qualification.</p>
+<div class="rows">
+<div class="qrow"><b>01 Pricing</b><span>Yes</span><span>SMB plans, tiers and price points, designed alongside the proposition.</span><a class="go" href="#job-1">Job 1</a></div>
+<div class="qrow"><b>02 Product and flow of work</b><span>Yes, to design it</span><span>We design the self-serve journey, including onboarding. Your team builds it in Mastry.</span><a class="go" href="#job-2">Job 2</a></div>
+<div class="qrow"><b>03 ICP</b><span>Yes</span><span>Which SMBs are the right fit for Mastry, and who the trial users and buyers are. JAA works with us on audience.</span><a class="go" href="#which-smbs">Which SMBs</a></div>
+<div class="qrow"><b>04 Website</b><span>Yes</span><span>Architecture, SEO and AEO, sign-up and payments. We design and build it.</span><a class="go" href="#job-2">Job 2</a></div>
+<div class="qrow"><b>05 Paid media</b><span>Yes</span><span>Channel strategy, budgets and creative from us. Media planning and buying with JAA.</span><a class="go" href="#job-3">Job 3</a></div>
+<div class="qrow"><b>06 Conversion</b><span>Yes, as assumptions first</span><span>Benchmarked rates in a model you can adjust, replaced with real rates once traffic is running.</span><a class="go" href="#funnel-model">Funnel model</a></div>
+<div class="qrow"><b>07 Customer support</b><span>Yes</span><span>The support model, tooling, content and resourcing plan. Your team staffs it.</span><a class="go" href="#job-2">Job 2</a></div>
+</div>
+</div>
+</section>
+
+<section class="page block t-cream has-video deep" data-id="selling-to-smbs" data-title="01 Selling to SMBs" data-section="1">
+<video class="bgvideo" src="media/selling.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+<div class="inner">
+<div class="num">01</div>
+<h1 class="shout">Selling to SMBs.</h1>
+<p class="lead">How selling to an SMB differs from selling to an enterprise, who's made the move and which SMBs we'd start with.</p>
+</div>
+</section>
+
+<section class="page" data-id="enterprise-vs-smb" data-title="Enterprise vs SMB">
+<div class="inner">
+<div class="head"><span class="eyebrow">01 · Selling to SMBs</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Selling to enterprise <span class="slab">vs selling to SMBs.</span></h1>
+<p class="lead">An enterprise buys with a sales team on hand to explain it, whereas an SMB has a web page and a few minutes. Each of your seven questions comes from one of these differences. Select a stage to see what it means for Mastry.</p>
+<div data-tabs>
+<div class="stages">
+<span class="desk-only"></span>
+<button type="button" data-tab="find" aria-pressed="true">01 Find</button>
+<button type="button" data-tab="evaluate" aria-pressed="false">02 Try</button>
+<button type="button" data-tab="buy" aria-pressed="false">03 Buy</button>
+<button type="button" data-tab="start" aria-pressed="false">04 Start</button>
+<button type="button" data-tab="help" aria-pressed="false">05 Support</button>
+<button type="button" data-tab="grow" aria-pressed="false">06 Scale</button>
+<div class="lane desk-only">Enterprise</div>
+<div class="cell desk-only on" data-stage="find">Sales outreach, events and referrals</div>
+<div class="cell desk-only" data-stage="evaluate">Demos, pilots and security reviews</div>
+<div class="cell desk-only" data-stage="buy">An annual contract, negotiated and paid by invoice</div>
+<div class="cell desk-only" data-stage="start">An implementation or customer success team</div>
+<div class="cell desk-only" data-stage="help">A named account manager</div>
+<div class="cell desk-only" data-stage="grow">An account manager expands the contract</div>
+<div class="lane smb desk-only">SMB self-serve</div>
+<div class="cell smb desk-only on" data-stage="find">Search, AI answers, paid media, ABM to segments and word of mouth</div>
+<div class="cell smb desk-only" data-stage="evaluate">They try it themselves, in a trial</div>
+<div class="cell smb desk-only" data-stage="buy">By card, monthly or annual, from a price list</div>
+<div class="cell smb desk-only" data-stage="start">They set up the account and add their team themselves</div>
+<div class="cell smb desk-only" data-stage="help">A help centre, chat and tickets</div>
+<div class="cell smb desk-only" data-stage="grow">They add people and move up a plan themselves</div>
+</div>
+
+<div data-panel="find" class="stack" style="margin-top:24px">
+<div class="grid g2 phone-only"><div class="card"><b>Enterprise</b><br>Sales outreach, events and referrals</div><div class="acid"><b>SMB self-serve</b><br>Search, AI answers, paid media, ABM to segments and word of mouth</div></div>
+<div class="grid g2"><div class="stack top-thin"><div class="kicker">What this means for Mastry</div><p class="big">Most SMBs have to find Mastry themselves, so the site architecture, SEO, AEO and paid media become the top of the funnel. Alongside that we'd run one-to-many ABM to segments and clusters, with one-to-one ABM for larger SMBs where the account is worth enough to justify it.</p></div><div class="stack top-thin"><div class="kicker">Your questions</div><p class="big">03 ICP · 04 Website · 05 Paid media</p><a class="go" href="#job-3">See job 3</a></div></div>
+</div>
+<div data-panel="evaluate" class="stack" style="margin-top:24px" hidden>
+<div class="grid g2 phone-only"><div class="card"><b>Enterprise</b><br>Demos, pilots and security reviews</div><div class="acid"><b>SMB self-serve</b><br>They try it themselves, in a free trial</div></div>
+<div class="grid g2"><div class="stack top-thin"><div class="kicker">What this means for Mastry</div><p class="big">The trial does the job of the demo. Sign-up, onboarding and first use all happen inside the product with nobody to guide them, and this is where the conversion rates are decided.</p></div><div class="stack top-thin"><div class="kicker">Your questions</div><p class="big">02 Product and flow of work · 06 Conversion</p><a class="go" href="#job-2">See job 2</a></div></div>
+</div>
+<div data-panel="buy" class="stack" style="margin-top:24px" hidden>
+<div class="grid g2 phone-only"><div class="card"><b>Enterprise</b><br>An annual contract, negotiated and paid by invoice</div><div class="acid"><b>SMB self-serve</b><br>By card, monthly or annual, from a price list</div></div>
+<div class="grid g2"><div class="stack top-thin"><div class="kicker">What this means for Mastry</div><p class="big">Nobody negotiates, so the price list has to be understood without help. Plans and tiers need to make sense to someone choosing on their own.</p></div><div class="stack top-thin"><div class="kicker">Your questions</div><p class="big">01 Pricing · 04 Website</p><a class="go" href="#job-1">See job 1</a></div></div>
+</div>
+<div data-panel="start" class="stack" style="margin-top:24px" hidden>
+<div class="grid g2 phone-only"><div class="card"><b>Enterprise</b><br>An implementation or customer success team</div><div class="acid"><b>SMB self-serve</b><br>They set up the account and add their team themselves</div></div>
+<div class="grid g2"><div class="stack top-thin"><div class="kicker">What this means for Mastry</div><p class="big">Once they've paid there's no implementation team. Setting up the account, adding the team and rolling it out all have to be designed into the product.</p></div><div class="stack top-thin"><div class="kicker">Your questions</div><p class="big">02 Product and flow of work</p><a class="go" href="#job-2">See job 2</a></div></div>
+</div>
+<div data-panel="help" class="stack" style="margin-top:24px" hidden>
+<div class="grid g2 phone-only"><div class="card"><b>Enterprise</b><br>A named account manager</div><div class="acid"><b>SMB self-serve</b><br>A help centre, chat and tickets</div></div>
+<div class="grid g2"><div class="stack top-thin"><div class="kicker">What this means for Mastry</div><p class="big">Support has to work at a cost that fits what an SMB pays. That shapes the support model, the tooling and the team.</p></div><div class="stack top-thin"><div class="kicker">Your questions</div><p class="big">07 Customer support</p><a class="go" href="#job-2">See job 2</a></div></div>
+</div>
+<div data-panel="grow" class="stack" style="margin-top:24px" hidden>
+<div class="grid g2 phone-only"><div class="card"><b>Enterprise</b><br>An account manager expands the contract</div><div class="acid"><b>SMB self-serve</b><br>They add people and move up a plan themselves</div></div>
+<div class="grid g2"><div class="stack top-thin"><div class="kicker">What this means for Mastry</div><p class="big">Growth comes from customers adding people and moving up a plan without being sold to, so the upgrade path and keeping customers matter as much as the first sale. The larger ones need a route to an enterprise contract.</p></div><div class="stack top-thin"><div class="kicker">Your questions</div><p class="big">01 Pricing · 02 Product and flow of work</p><a class="go" href="#job-2">See job 2</a></div></div>
+</div>
+</div>
+<p class="muted small">The enterprise lane shows the general pattern. We'll replace it with how you'll sell Mastry to enterprise from January <span class="tbc">TBC</span></p>
+</div>
+</section>
+
+<section class="page" data-id="who-sells-to-both" data-title="Who sells to both: Salesforce, HubSpot">
+<div class="inner">
+<div class="head"><span class="eyebrow">01 · Selling to SMBs · From the wider industry</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">From micro to enterprise, <span class="slab">here's who sells to both.</span></h1>
+<p class="lead">Your brief asks for examples from the wider industry. Salesforce started with enterprise and added a version SMBs buy online, which is the move Mastry is making. HubSpot went the other way.</p>
+<div data-tabs class="stack" style="gap:24px">
+<div class="tablist">
+<button type="button" data-tab="salesforce" aria-pressed="true">Salesforce</button>
+<button type="button" data-tab="hubspot" aria-pressed="false">HubSpot</button>
+</div>
+<div data-panel="salesforce" class="grid g2">
+<div class="stack"><img class="brandlogo" src="logos/salesforce.svg" alt="Salesforce" style="height:64px"><div class="kicker">Enterprise first, then SMB</div><h2>From enterprise sales to a version SMBs buy online</h2><p class="big">Salesforce is the world's biggest CRM company and has historically sold to large organisations through sales teams. In 2023 it launched Starter Suite, a simple, low-cost version that SMBs can buy online.</p><p class="muted small">Source: <a href="https://www.salesforce.com/uk/small-business/starter/" target="_blank" rel="noopener">Salesforce Starter Suite</a></p></div>
+<div class="cmp"><div class="cmp-h"><span></span><span class="kicker">SMB</span><span class="kicker">Enterprise</span></div><div class="cmp-r"><b>Buying</b><span data-l="SMB">Try it free and pay by card online</span><span data-l="Enterprise">Through a sales team and a demo</span></div><div class="cmp-r"><b>Price</b><span data-l="SMB">Low, public prices per user, per month</span><span data-l="Enterprise">Much more, on custom contracts</span></div><div class="cmp-r"><b>Product</b><span data-l="SMB">One simple package they set up themselves</span><span data-l="Enterprise">Advanced, customisable tools and AI features</span></div><div class="cmp-r"><b>Support</b><span data-l="SMB">Online help guides</span><span data-l="Enterprise">Dedicated support and setup experts</span></div></div>
+</div>
+<div data-panel="hubspot" class="grid g2" hidden>
+<div class="stack"><img class="brandlogo" src="logos/hubspot.svg" alt="HubSpot" style="height:44px;margin:10px 0 18px;display:var(--show-light)"><img class="brandlogo" src="logos/hubspot-dark.svg" alt="HubSpot" style="height:44px;margin:10px 0 18px;display:var(--show-dark)"><div class="kicker">SMB first, then enterprise</div><h2>From SMBs online to enterprise</h2><p class="big">HubSpot makes software for marketing, sales and customer service. Unlike Salesforce it started by selling to SMBs online, and in 2018 it launched Enterprise versions of its products for larger organisations.</p><p class="muted small">Source: <a href="https://www.hubspot.com/pricing" target="_blank" rel="noopener">HubSpot pricing</a></p></div>
+<div class="cmp"><div class="cmp-h"><span></span><span class="kicker">SMB</span><span class="kicker">Enterprise</span></div><div class="cmp-r"><b>Buying</b><span data-l="SMB">Start with free tools or a trial and pay by card online</span><span data-l="Enterprise">Through sales teams and product demos</span></div><div class="cmp-r"><b>Price</b><span data-l="SMB">Low, public prices that rise through the tiers (Free, Starter, Professional)</span><span data-l="Enterprise">More, on annual contracts</span></div><div class="cmp-r"><b>Product</b><span data-l="SMB">Simple tools they set up themselves</span><span data-l="Enterprise">Advanced features e.g. custom reporting, stronger admin and security controls and more developed AI tools</span></div><div class="cmp-r"><b>Support</b><span data-l="SMB">Online help guides, free courses (HubSpot Academy) and standard support</span><span data-l="Enterprise">Dedicated support from experts</span></div></div>
+</div>
+</div>
+<div class="acid stack"><div class="kicker">What it shows</div><p class="big">Both companies changed the same four things between SMB and enterprise: how it's bought, how it's priced, what's in the product and how it's supported. Those are the things your brief asks about. <b>Salesforce didn't sell its enterprise product to SMBs for less. It made a simpler package with its own way of buying it.</b> HubSpot shows the other end i.e. the route from self-serve up to an enterprise contract.</p></div>
+</div>
+</section>
+
+<section class="page" data-id="which-smbs" data-title="Which SMBs">
+<div class="inner" style="gap:clamp(32px,3.6vw,56px)">
+<div class="head"><span class="eyebrow">01 · Selling to SMBs</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">A billion-pound opportunity, <span class="slab">across three different segments.</span></h1>
+<p class="lead">A business of five people and one of two hundred buy training and software in different ways. This is our starting point for question 03 i.e. which SMBs are the right fit for Mastry, who the trial users are and who the buyers are.</p>
+<figure class="tail" id="tail">
+<div class="kicker">The long tail of UK businesses with 1 to 249 employees</div>
+<div class="tail-plot">
+<div class="tail-y" aria-hidden="true"><span style="bottom:100%">100</span><span style="bottom:75%">75</span><span style="bottom:50%">50</span><span style="bottom:25%">25</span><span style="bottom:0">0</span></div>
+<div class="tail-area">
+<div class="tail-chart">
+<i class="gl" style="bottom:100%"></i><i class="gl" style="bottom:75%"></i><i class="gl" style="bottom:50%"></i><i class="gl" style="bottom:25%"></i>
+<div class="tail-bars">
+<div class="tb" data-b="0" tabindex="0" role="img" aria-label="Mid-size: 39,000 businesses, about 97 staff each" style="flex-grow:39220;height:96.84%"></div>
+<div class="tb" data-b="1" tabindex="0" role="img" aria-label="Small: 225,000 businesses, about 20 staff each" style="flex-grow:225215;height:19.63%"></div>
+<div class="tb" data-b="2" tabindex="0" role="img" aria-label="Micro: 1.2 million businesses, about 4 staff each" style="flex-grow:1198870;height:3.58%"></div>
+</div>
+<svg class="tail-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path class="halo" d="M1.34 3.16C3.5 45 6 72 10.38 80.37C14.5 88.2 38 95 59.04 96.42C75 97.4 90 98.2 100 98.6"/><path class="ln" d="M1.34 3.16C3.5 45 6 72 10.38 80.37C14.5 88.2 38 95 59.04 96.42C75 97.4 90 98.2 100 98.6"/></svg>
+<i class="tp" style="left:1.34%;bottom:96.84%"></i><i class="tp" style="left:10.38%;bottom:19.63%"></i><i class="tp" style="left:59.04%;bottom:3.58%"></i>
+</div>
+<div class="tl" data-b="0" style="left:calc(2.68% + 14px);top:0"><b>Mid-size</b><span>39,000 businesses, about 97 staff each</span></div>
+<div class="tl" data-b="1" style="left:calc(18.1% + 14px);bottom:19.63%"><b>Small</b><span>225,000 businesses, about 20 staff each</span></div>
+<div class="tl" data-b="2" style="left:58%;bottom:calc(3.58% + 26px)"><b>Micro</b><span>1.2 million businesses, about 4 staff each</span></div>
+</div>
+</div>
+<div class="tail-x"><span>Height: average staff per business</span><span>Width: number of businesses, 1.46 million in all</span></div>
+<figcaption>Each block covers about the same area, because each band employs roughly 4 million people. The three shades match the three columns below. The dashed line is drawn through the three averages to show the shape of the tail. It's an illustration, as the figures don't give the spread within each band.</figcaption>
+</figure>
+<div class="grid g3">
+<div class="stack top band band0"><div class="kicker">Mid-size</div><h2>50 to 249 employees</h2>
+<div class="rows"><div class="kv"><span>UK businesses</span><b class="big">39,000</b></div><div class="kv"><span>People employed</span><b class="big">3.8 million</b></div><div class="kv"><span>Average staff per business</span><b class="big">about 97</b></div><div class="kv"><span>Average turnover per business</span><b class="big">about £24.6 million</b></div><div class="kv"><span>Turnover per person employed</span><b class="big">about £254,000</b></div><div class="kv"><span>Training investment a year (estimate)</span><b class="big">about £5.8 billion</b></div><div class="kv"><span>Training investment per business</span><b class="big">about £149,000</b></div><div class="kv"><span>Paid to external providers, per business</span><b class="big">about £10,000</b></div><div class="kv"><span>Trial user: who signs up and tries it</span><span class="tbc">TBC</span></div><div class="kv"><span>Buyer: who approves the spend</span><span class="tbc">TBC</span></div><div class="kv"><span>How they buy training and software</span><span class="tbc">TBC</span></div><div class="kv"><span>Fit for Mastry</span><span class="tbc">TBC</span></div></div></div>
+<div class="stack top band band1"><div class="kicker">Small</div><h2>10 to 49 employees</h2>
+<div class="rows"><div class="kv"><span>UK businesses</span><b class="big">225,000</b></div><div class="kv"><span>People employed</span><b class="big">4.4 million</b></div><div class="kv"><span>Average staff per business</span><b class="big">about 20</b></div><div class="kv"><span>Average turnover per business</span><b class="big">about £3.3 million</b></div><div class="kv"><span>Turnover per person employed</span><b class="big">about £170,000</b></div><div class="kv"><span>Training investment a year (estimate)</span><b class="big">about £9.9 billion</b></div><div class="kv"><span>Training investment per business</span><b class="big">about £44,000</b></div><div class="kv"><span>Paid to external providers, per business</span><b class="big">about £2,800</b></div><div class="kv"><span>Trial user: who signs up and tries it</span><span class="tbc">TBC</span></div><div class="kv"><span>Buyer: who approves the spend</span><span class="tbc">TBC</span></div><div class="kv"><span>How they buy training and software</span><span class="tbc">TBC</span></div><div class="kv"><span>Fit for Mastry</span><span class="tbc">TBC</span></div></div></div>
+<div class="stack top band band2"><div class="kicker">Micro</div><h2>1 to 9 employees</h2>
+<div class="rows"><div class="kv"><span>UK businesses</span><b class="big">1.2 million</b></div><div class="kv"><span>People employed</span><b class="big">4.3 million</b></div><div class="kv"><span>Average staff per business</span><b class="big">about 4</b></div><div class="kv"><span>Average turnover per business</span><b class="big">about £590,000</b></div><div class="kv"><span>Turnover per person employed</span><b class="big">about £164,000</b></div><div class="kv"><span>Training investment a year (estimate)</span><b class="big">about £9.8 billion</b></div><div class="kv"><span>Training investment per business</span><b class="big">about £8,200</b></div><div class="kv"><span>Paid to external providers, per business</span><b class="big">about £700</b></div><div class="kv"><span>Trial user: who signs up and tries it</span><span class="tbc">TBC</span></div><div class="kv"><span>Buyer: who approves the spend</span><span class="tbc">TBC</span></div><div class="kv"><span>How they buy training and software</span><span class="tbc">TBC</span></div><div class="kv"><span>Fit for Mastry</span><span class="tbc">TBC</span></div></div></div>
+</div>
+<div class="tot"><div class="kicker">All three bands · TOTAL training investment PER YEAR · our estimate</div>
+<div class="tot-nums"><div><b class="tot-n">about £25.5 billion</b><span>Total training investment</span></div><div><b class="tot-n">about £1.9 billion</b><span>Of which paid to external providers</span></div></div>
+<p>Most of the £25.5 billion isn't cash. Across the UK about half of what the survey counts as training investment is the wages of people while they train, and only 7% is fees to external providers. For a paid product like Mastry the £1.9 billion is the closer comparison. The averages also hide a lot of zeros e.g. only 44% of workplaces with 2 to 4 employees provided any training.</p></div>
+<div class="grid g3">
+<div class="card stack"><div class="kicker">What the numbers say</div><p>About 1.46 million UK businesses have between 1 and 249 employees. 82% of them are micro, 15% small and 3% mid-size, but each band employs roughly 4 million people. If Mastry is priced per seat, 39,000 mid-size businesses hold nearly as many seats as 1.2 million micro businesses. Average turnover runs from about £590,000 for a micro business to about £24.6 million for a mid-size one, and turnover per person is highest in mid-size.</p></div>
+<div class="card stack"><div class="kicker">Where we'd start</div><p>Which band we'd go after first and why <span class="tbc">TBC</span> Size alone won't be enough, so we'd add a second cut e.g. sector, or how much the business depends on its owner.</p></div>
+<div class="acid stack"><div class="kicker">How we'd test it</div><p>The ICP is a hypothesis until there's spend behind it. With JAA we'd test sectors through paid media, then put budget into the ones that perform, either for volume or for efficiency.</p></div>
+</div>
+<div class="stack top-thin" style="gap:10px"><div class="kicker">Sources and notes</div>
+<p class="muted small"><b>Business numbers.</b> <a href="https://www.gov.uk/government/statistics/business-population-estimates-2026/business-population-estimates-for-the-uk-and-regions-2026-statistical-release" target="_blank" rel="noopener">Business population estimates for the UK and regions 2026</a> (GOV.UK), private sector businesses at the start of 2026, rounded. The release is labelled 'official statistics in development' and its employment figures are indicative. The bands leave out the 4.1 million businesses with no employees. The averages are means worked out from the release's totals, so a few very large businesses pull them up and the typical business in each band will sit below them. Turnover leaves out financial and insurance businesses.</p>
+<p class="muted small"><b>Training investment.</b> <a href="https://assets.publishing.service.gov.uk/media/69205d2db303fcb3352e5347/Employer_skills_survey_2024_full_UK_research_report.pdf" target="_blank" rel="noopener">Employer Skills Survey 2024</a> (Department for Education), training investment per employee by size of workplace, multiplied by the headcounts above. These are our estimates and not published figures. We've mapped the survey's size bands to ours, and mid-size is the least certain because the survey's top band is '100 or more', so the total could sit anywhere between about £24 billion and £27 billion. The survey counts each workplace separately and not each company, so a small branch of a large company sits in a small band. It also leaves out workplaces with one employee. Its fieldwork ran from June 2024 to January 2025 and the headcounts are for the start of 2026.</p>
+</div>
+</div>
+</section>
+
+<section class="page block t-acid has-video" data-id="the-three-jobs" data-title="02 The three jobs" data-section="1">
+<video class="bgvideo" src="media/cover.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+<div class="inner">
+<div class="num">02</div>
+<h1 class="shout">The three jobs.</h1>
+<p class="lead">What we'd do in each, what you'd do, and where we've done it before.</p>
+</div>
+</section>
+
+<section class="page" data-id="job-1" data-title="Job 1: Reposition Mastry for SMBs">
+<div class="inner">
+<div class="head"><span class="eyebrow">02 · Job 1 of 3</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Job 1. <span class="slab">Reposition Mastry for SMBs.</span></h1>
+<p class="lead">The first job is working out what Mastry is for a small business when there's nobody there to explain it. This covers your questions on ICP (03) and pricing (01).</p>
+<div class="grid g2">
+<div class="stack">
+<div class="kicker">What we do</div>
+<div class="rows">
+<div class="stack" style="gap:4px"><b class="big">ICP</b><span>Which SMBs are the right fit for Mastry, who the trial users are and who the buyers are. JAA works with us on audience, identifying the audiences within each sector.</span></div>
+<div class="stack" style="gap:4px"><b class="big">Proposition</b><span>What the enterprise promise becomes for an SMB, and the messaging that follows from it.</span></div>
+<div class="stack" style="gap:4px"><b class="big">Plans and pricing</b><span>Plans, tiers and price points an SMB can understand and choose between without help.</span></div>
+</div>
+<div class="kicker" style="margin-top:12px">What you do</div>
+<p>Share enterprise pricing, deal data and customer research under NDA, and sign off pricing and packaging.</p>
+</div>
+<div class="stack">
+<div class="stack top-thin"><div class="kicker">Our point of view</div><p class="big">Most of your questions are about how to sell and support Mastry. We think they all come back to this first job. You can't price it, build the website or brief the ads until you've agreed what an SMB thinks it's buying.</p></div>
+<a class="go" href="#cisco-designed" style="align-self:flex-start">Where we've done it: Cisco Designed</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page" data-id="cisco-designed" data-title="Example: Cisco Designed">
+<div class="inner">
+<div class="head"><span class="eyebrow">02 · Job 1 · Where we've done it</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Cisco Designed</h1>
+<div class="grid g2">
+<div class="creamcard stack" style="gap:16px">
+<p class="big">Cisco Designed is Cisco's portfolio for small business, and Oliver Budworth, our strategy lead, developed its brand strategy in 2021 in a previous role.</p>
+<p>The work found that Cisco's size, which is an advantage with enterprise buyers, counted against it with small businesses. It also found that owners don't need to be passionate about technology to want to buy it.</p>
+<p><b>The proposition was built around the owner's business rather than Cisco's products; 'Master your business'.</b></p>
+</div>
+<div class="stack">
+<div class="stack top-thin"><div class="kicker">Why it's relevant</div><p class="big">Mastry has the same question to answer i.e. what does an enterprise product do for a small business, in the owner's own words?</p><p>We'd put Mastry's SMB proposition through the same three tests.</p></div>
+</div>
+</div>
+<div data-tabs class="stack" style="gap:24px">
+<div class="kicker">How the work got there</div>
+<div class="tablist">
+<button type="button" data-tab="found" aria-pressed="true">What we found</button>
+<button type="button" data-tab="size" aria-pressed="false">The size problem</button>
+<button type="button" data-tab="tests" aria-pressed="false">Three tests</button>
+<button type="button" data-tab="routes" aria-pressed="false">Three routes</button>
+<button type="button" data-tab="prop" aria-pressed="false">The proposition</button>
+</div>
+<div data-panel="found" class="sp">
+<figure class="slidefig"><button type="button" class="slidebtn" data-zoom="cisco/4cs.jpg" aria-label="Enlarge slide: The four findings, from the 2021 deck"><img src="cisco/4cs.jpg" alt="The four findings, from the 2021 deck" loading="lazy" width="1440" height="810"></button><figcaption>The four findings, from the 2021 deck</figcaption></figure><div class="stack" style="gap:16px">
+<p>The research looked at four things: the culture small businesses operate in, the customer, the category and the company.</p>
+<div class="grid g4" style="gap:6px">
+<div class="stack card"><div class="kicker">Culture</div><b class="big">Small businesses matter</b><span>They are critical to society, and even more so in a crisis.</span></div><div class="stack card"><div class="kicker">Customer</div><b class="big">Passion and graft</b><span>Born of passion and grown through graft, grit and guts.</span></div><div class="stack card"><div class="kicker">Category</div><b class="big">Big tech doesn't get them</b><span>Big tech is ignorant to the needs of small business.</span></div><div class="stack card"><div class="kicker">Company</div><b class="big">Size counts against Cisco</b><span>What works with enterprise buyers works against it with small business.</span></div>
+</div>
+<p class="big">The insight that turned the work: they didn't start a business to run IT. They started it to run <i>their</i> business.</p>
+</div>
+</div>
+<div data-panel="size" class="sp" hidden>
+<figure class="slidefig"><button type="button" class="slidebtn" data-zoom="cisco/size.jpg" aria-label="Enlarge slide: Insight three, from the 2021 deck"><img src="cisco/size.jpg" alt="Insight three, from the 2021 deck" loading="lazy" width="1440" height="810"></button><figcaption>Insight three, from the 2021 deck</figcaption></figure><div class="stack" style="gap:16px">
+<p>Small businesses saw Cisco's size as a reason not to buy. The work gave that size a job to do for them.</p>
+<div class="grid g2" style="gap:6px">
+<div class="stack card"><div class="kicker">How size read</div><b class="big">Expensive. Complicated. Built for someone with an IT department.</b><span>In the words of one owner, "Bring a spare kidney."</span></div><div class="stack card cisco-win"><div class="kicker">How size should read</div><b class="big">The technology the big players run, made simple enough for a team of six.</b><span>The same reliability, none of the department.</span></div>
+</div>
+</div>
+</div>
+<div data-panel="tests" class="sp" hidden>
+<figure class="slidefig"><button type="button" class="slidebtn" data-zoom="cisco/tests.jpg" aria-label="Enlarge slide: The three tests, from part two"><img src="cisco/tests.jpg" alt="The three tests, from part two" loading="lazy" width="1440" height="810"></button><figcaption>The three tests, from part two</figcaption></figure><div class="stack" style="gap:16px">
+<p>The starting thought was 'Small business deserves good technology'. That's a belief and it describes what Cisco gives. A proposition has to describe what the owner gets, so the final line had to pass three tests.</p>
+<div class="grid g3" style="gap:6px">
+<div class="stack card"><div class="kicker">Test 1</div><b class="big">Is it about them?</b><span>The owner is the subject of the sentence, not Cisco.</span></div><div class="stack card"><div class="kicker">Test 2</div><b class="big">Does it give our size a job?</b><span>Enterprise heritage becomes a reason to believe, not a thing to apologise for.</span></div><div class="stack card"><div class="kicker">Test 3</div><b class="big">Can everyone act on it?</b><span>Product, partners, sales and creative can all use it without translation.</span></div>
+</div>
+</div>
+</div>
+<div data-panel="routes" class="sp" hidden>
+<figure class="slidefig"><button type="button" class="slidebtn" data-zoom="cisco/routes.jpg" aria-label="Enlarge slide: The three routes, from part two"><img src="cisco/routes.jpg" alt="The three routes, from part two" loading="lazy" width="1440" height="810"></button><figcaption>The three routes, from part two</figcaption></figure><div class="stack" style="gap:16px">
+<p>Three routes were scored against the tests.</p>
+<div class="grid g3" style="gap:6px">
+<div class="stack card"><div class="kicker">A · Respect</div><b class="big">Small business deserves good technology</b><span>Warm and true, but Cisco is the subject and any vendor could say it.</span></div><div class="stack card"><div class="kicker">B · Recognition</div><b class="big">Built for the business you built</b><span>The owner is the hero, but it stays on product and the category already says it.</span></div><div class="stack card cisco-win"><div class="kicker">C · Mastery · chosen</div><b class="big">Master your business</b><span>About them, an outcome and a verb. It gives size a job, and product, partners and creative can all act on it.</span></div>
+</div>
+</div>
+</div>
+<div data-panel="prop" class="sp" hidden>
+<figure class="slidefig"><button type="button" class="slidebtn" data-zoom="cisco/prop.jpg" aria-label="Enlarge slide: The proposition, from part two"><img src="cisco/prop.jpg" alt="The proposition, from part two" loading="lazy" width="1440" height="810"></button><figcaption>The proposition, from part two</figcaption></figure><div class="stack" style="gap:16px">
+<div class="stack"><div class="kicker">Brand proposition</div><h2>Master your business.</h2><p class="big">Not your network. Not your IT. The business you built, your way.</p></div>
+<div class="rows">
+<div><b>Promise.</b> Cisco Designed gives small businesses the technology the big players rely on, made simple, so the people who built the business can run it.</div>
+<div><b>Role.</b> An ingredient, not the hero. Present when it matters, invisible when it doesn't.</div>
+<div><b>Behaviour.</b> Humble, respectful, plain and dependable. Talk like a good supplier, not a tech brand.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page" data-id="job-2" data-title="Job 2: Build the means to sell and support it">
+<div class="inner">
+<div class="head"><span class="eyebrow">02 · Job 2 of 3</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Job 2. <span class="slab">Build the means to sell and support it.</span></h1>
+<p class="lead">An SMB needs to find Mastry, try it, buy it, get set up and get help with it without speaking to anyone, and it needs to keep working for them as they grow. Your questions on product (02), website (04) and support (07) sit here, and for us they're parts of one experience.</p>
+<div class="stack row-pre"><div class="kicker">Before they're a customer</div><div class="grid g3" style="gap:6px">
+<div class="stack card"><b class="big">Find</b><span>Site architecture, SEO and AEO, and the pages that explain Mastry to an SMB.</span><span class="kicker" style="margin-top:auto">04 Website · We design and build</span></div>
+<div class="stack card"><b class="big">Try</b><span>Sign-up, the trial and what's included in it, onboarding and first use, and what counts as an active user.</span><span class="kicker" style="margin-top:auto">02 Product · We design, you build</span></div>
+<div class="stack card"><b class="big">Buy</b><span>The pricing page, plans, sign-up, payments and billing, and where an upgrade is offered.</span><span class="kicker" style="margin-top:auto">02 Product, 04 Website · Shared</span></div>
+</div></div>
+<div class="stack row-post"><div class="kicker">Once they're a customer</div><div class="grid g3" style="gap:6px">
+<div class="stack card"><b class="big">Start</b><span>What happens once they've paid: setting up the account, adding the team and rolling it out across the business.</span><span class="kicker" style="margin-top:auto">02 Product · We design, you build</span></div>
+<div class="stack card"><b class="big">Support</b><span>The help centre, chat and tickets, what it costs to serve each customer and the route to your enterprise team.</span><span class="kicker" style="margin-top:auto">07 Support · We set up, you staff</span></div>
+<div class="stack card"><b class="big">Scale</b><span>What happens as the business grows: adding people and teams, moving up a plan, and the route to an enterprise contract when they outgrow self-serve.</span><span class="kicker" style="margin-top:auto">01 Pricing, 02 Product · Shared</span></div>
+</div>
+</div>
+<div class="acid stack"><div class="kicker">What you build</div><p class="big">The changes to Mastry itself are built by your product and engineering team. We'll design them and stay with your product team through delivery, bringing what we know works in self-serve. <b>That makes your engineering capacity in H1 the main dependency for the SMB launch, so it's the first thing we'd want to understand.</b></p></div>
+<a class="go" href="#job-2-examples" style="align-self:flex-start">Where we've done it: Grantify, Help for Heroes</a>
+</div>
+</section>
+
+<section class="page" data-id="job-2-examples" data-title="Examples: Grantify, Help for Heroes">
+<div class="inner">
+<div class="head"><span class="eyebrow">02 · Job 2 · Where we've done it</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Where we've done it</h1>
+<div data-tabs class="stack" style="gap:24px">
+<div class="tablist">
+<button type="button" data-tab="grantify" aria-pressed="true">Grantify</button>
+<button type="button" data-tab="h4h" aria-pressed="false">Help for Heroes</button>
+</div>
+<div data-panel="grantify" class="grid g2 shots-host">
+<div class="stack"><h2>From a free platform to one customers buy from</h2><p class="big">Grantify is a funding platform for SMBs. Working closely with their product and commercial teams, we took a free-to-use platform and turned it into something customers could buy from directly.</p></div>
+<div class="rows">
+<div>We defined three plans (Free, Pro and Unlimited) with monthly and annual options.</div>
+<div>We designed the buying journey inside the platform; plan selection, upgrade, billing, invoices and a comparison view.</div>
+<div>We built prompts that show customers where they are against their plan's limits and offer the upgrade at the point they'd want it.</div>
+<div>We launched it to Grantify's existing customers through outbound and nurture email.</div>
+</div>
+<div class="grid g2 shots"><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="grantify/plans.jpg" aria-label="Enlarge screenshot: The plans page inside the platform"><img src="grantify/plans.jpg" alt="The plans page inside the platform" loading="lazy" width="1600" height="1004"></button><figcaption>The plans page inside the platform</figcaption></figure><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="grantify/eligibility.jpg" aria-label="Enlarge screenshot: The eligibility check, pre-filled from the account"><img src="grantify/eligibility.jpg" alt="The eligibility check, pre-filled from the account" loading="lazy" width="1600" height="1004"></button><figcaption>The eligibility check, pre-filled from the account</figcaption></figure></div>
+</div>
+<div data-panel="h4h" class="grid g2 shots-host" hidden>
+<div class="stack"><h2>A service redesigned from end to end</h2><p class="big">We redesigned Help for Heroes' core service from end to end, including the operating model, a new support role and a capacity model the board could test.</p><p>The map below is the target operating model. It follows one journey in five stages, from someone wondering whether Help for Heroes is for people like them through to staying connected after their support ends. For each stage it sets out what the person is thinking, feeling and doing, and what has to be in place behind the scenes i.e. the teams, content, processes, platforms, data and measures.</p></div>
+<div class="stack top-thin"><div class="kicker">Why it's relevant</div><p>It's a different sector, but it's the same method we'd use for Mastry's SMB support model: start from what the customer is trying to do at each stage, then work out what the business needs in place to meet them.</p></div>
+<div class="shots h4h-shots"><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="h4h/map-top.jpg" aria-label="Enlarge: The top of the map: the stages, the objective for each and what the person is thinking and doing"><img src="h4h/map-top.jpg" alt="The top of the map: the stages, the objective for each and what the person is thinking and doing" loading="lazy" width="2400" height="749"></button><figcaption>The top of the map: the stages, the objective for each and what the person is thinking and doing</figcaption></figure>
+<div class="grid g2 shots"><figure class="slidefig"><button type="button" class="slidebtn fit" data-zoom="h4h/map-detail.jpg" aria-label="Enlarge: A closer look at the first stage, Seeking Help"><img src="h4h/map-detail.jpg" alt="A closer look at the first stage, Seeking Help" loading="lazy" width="1500" height="1439"></button><figcaption>A closer look at the first stage, Seeking Help</figcaption></figure><figure class="slidefig"><button type="button" class="slidebtn fit" data-zoom="h4h/map-whole.jpg" aria-label="Enlarge: The whole map, to show its extent"><img src="h4h/map-whole.jpg" alt="The whole map, to show its extent" loading="lazy" width="1200" height="1955"></button><figcaption>The whole map, to show its extent</figcaption></figure></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page" data-id="job-3" data-title="Job 3: Attract, convert, then scale">
+<div class="inner">
+<div class="head"><span class="eyebrow">02 · Job 3 of 3</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Job 3. <span class="slab">Attract, convert, then scale.</span></h1>
+<p class="lead">With the proposition set and the means to buy in place, the job becomes getting Mastry in front of the right SMBs and converting them. This covers your questions on paid media (05) and conversion (06).</p>
+<p>JAA's media approach is to define and segment the relevant sectors using LinkedIn and your own client insights, sort them into four categories, then put the effort into the sectors with the highest potential.</p>
+<div data-tabs class="stack" style="gap:16px">
+<div class="tablist">
+<button type="button" data-tab="test" aria-pressed="true">01 Defining our battlefields</button>
+<button type="button" data-tab="learn" aria-pressed="false">02 Choosing our battlefields</button>
+<button type="button" data-tab="roll" aria-pressed="false">03 Horses for courses</button>
+</div>
+<div data-panel="test" class="grid g2" style="gap:6px"><div class="card stack"><div class="kicker">Thrive</div><p class="big">Creative and landing pages for the campaign, and ABM to the segments we're testing, with tracking in place before any spend.</p></div><div class="card jaa stack"><div class="kicker">JAA</div><p class="big">A broad campaign on LinkedIn with several creative routes, running for at least a month.</p><p>Audiences are grouped into buyers, approvers and users, recognising that the smaller the business, the more likely these roles are to merge. The budget needs to be big enough to get a reading without investing too much too early.</p><p><b>Output:</b> immediate engagement from audiences, and insight into engagement by sector and by job title, aligned with your own client insights. This decides where effort is best spent.</p></div></div>
+<div data-panel="learn" class="grid g2" style="gap:6px" hidden><div class="card stack"><div class="kicker">Thrive</div><p class="big">Replace the assumptions in the funnel model with real rates, and adjust the journey where people drop out.</p></div><div class="card jaa stack"><div class="kicker">JAA</div><p class="big">Sort the sectors and audiences into four categories.</p><p>Not all of them will be equally attractive, and running the same campaign with the same objective across every sector would limit growth. Three of the categories get their own campaign, each with its own objective. The fourth is left alone, because you can't be all things to all people.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><div class="stack" style="gap:4px;padding:16px 18px;border-radius:var(--r-lg);background:var(--surface-white)"><b>Ticking over</b><span class="small">Cost efficient but limited scale</span></div><div class="stack" style="gap:4px;padding:16px 18px;border-radius:var(--r-lg);background:var(--surface-white)"><b>Flywheel</b><span class="small">Cost efficient and scalable</span></div><div class="stack" style="gap:4px;padding:16px 18px;border-radius:var(--r-lg);border:1px dashed currentColor;opacity:.6"><b>Ignore</b><span class="small">Not cost efficient and limited scale</span></div><div class="stack" style="gap:4px;padding:16px 18px;border-radius:var(--r-lg);background:var(--surface-white)"><b>Max effort</b><span class="small">Scalable but not immediately cost efficient</span></div></div></div></div>
+<div data-panel="roll" class="stack" style="gap:6px" hidden><div class="grid g3" style="gap:6px"><div class="card jaa stack"><div class="kicker">JAA · Ticking over</div><p class="big">Cost efficient but limited scale</p><p>Efficient, but with limited potential to grow. These sectors are easy to recruit through LinkedIn and are kept ticking over, with limited effort beyond that.</p></div><div class="card jaa stack"><div class="kicker">JAA · Flywheel</div><p class="big">Cost efficient and scalable</p><p>The sweet spot. They've already bought into the need and have few challenges around onboarding. LinkedIn stays the priority, with small sector-specific tests beyond it e.g. trade shows, trade press and sector-specific audience builds.</p></div><div class="card jaa stack"><div class="kicker">JAA · Max effort</div><p class="big">Scalable but not immediately cost efficient</p><p>Sectors that have shown engagement, or should be engaging, but with limited uptake at first. This is where the biggest potential is. The work is to find what's holding them back e.g. AI caution, lack of resources or investment, then answer it with bespoke creative, messaging by role and building trust beyond digital channels.</p></div></div><div class="grid g2" style="gap:6px"><div class="card stack"><div class="kicker">Thrive</div><p class="big">Agree spend with you against the model, and hand the running of it to your team.</p></div><div class="card stack"><div class="kicker">The order we'd go in</div><p>Ticking over and Flywheel are the easy wins, so we'd establish those first or run them in parallel with Max effort, depending on appetite. Building trust helps every audience, and broader, more trusted formats come later e.g. AV, targeted sporting events, trade shows and trade press, financial newspapers and audio. We'd prove the system delivers before taking those on.</p></div></div></div>
+</div>
+<p class="muted">We direct the work with JAA, so you have one point of contact. Launch budget <span class="tbc">TBC</span></p>
+<div style="display:flex;flex-wrap:wrap;gap:12px 32px"><a class="go" href="#funnel-model">The funnel model</a><a class="go" href="#job-3-examples">Where we've done it</a></div>
+</div>
+</section>
+
+<section class="page" data-id="funnel-model" data-title="The funnel model">
+<div class="inner">
+<div class="head"><span class="eyebrow">02 · Job 3 · Question 06</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">The <span class="slab">funnel model.</span></h1>
+<p class="lead">Nobody can give you real conversion rates until SMBs are able to try Mastry. Our starting point is a model built on benchmarked assumptions, in a spreadsheet where you can change the inputs and see what happens. Once traffic is running we'll replace the assumptions with real rates.</p>
+<div><span class="tbc">Illustrative shape · rates TBC</span></div>
+<div class="f3d" id="f3d">
+<canvas id="f3dCanvas" role="img" aria-label="A funnel in four stages, narrowing at each one: visit, registration, trial and active. Dots fall in at the top, some leave at each stage, and a few come out at the bottom."></canvas>
+<div class="f3d-notes">
+<div class="f3d-note"><b class="big">Visit</b><span>Paid, search and referral traffic.</span><span class="small"><span class="tbc">TBC %</span> go on to create an account</span></div>
+<div class="f3d-note"><b class="big">Registration</b><span>Creates an account.</span><span class="small"><span class="tbc">TBC %</span> go on to start a trial</span></div>
+<div class="f3d-note"><b class="big">Trial</b><span>Starts using Mastry.</span><span class="small"><span class="tbc">TBC %</span> go on to become active</span></div>
+<div class="f3d-note"><b class="big">Active</b><span>Definition agreed with your product team.</span><span class="small">The number the programme is held to</span></div>
+</div>
+</div>
+<div class="grid g2">
+<div class="stack top-thin"><div class="kicker">Before launch</div><p>The rates are benchmarked assumptions. Benchmark ranges for B2B and SMB audiences from JAA <span class="tbc">TBC</span></p></div>
+<div class="stack top-thin"><div class="kicker">After launch</div><p>Once tracking is in place and traffic is running, the assumptions are replaced with real numbers and we'd agree spend with you against them.</p></div>
+</div>
+</div>
+</section>
+
+<section class="page" data-id="job-3-examples" data-title="Examples: Grantify, JAA">
+<div class="inner">
+<div class="head"><span class="eyebrow">02 · Job 3 · Where we've done it</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Where we've done it</h1>
+<div data-tabs class="stack" style="gap:24px">
+<div class="tablist">
+<button type="button" data-tab="g" aria-pressed="true">Grantify</button>
+<button type="button" data-tab="j" aria-pressed="false">Vycel</button>
+<button type="button" data-tab="j2" aria-pressed="false">CMI and Willis Towers Watson</button>
+</div>
+<div data-panel="g" class="grid g2 shots-host">
+<div class="stack"><h2>From paused spend to a working demand engine</h2><p class="big">When we started, Grantify had no marketing team and had paused spend because the leads were poor. We built the proposition and then the engine behind it; paid search, LinkedIn, outbound, landing pages, a HubSpot rebuild, nurture and tracking.</p></div>
+<div class="rows">
+<div><b class="big">184 visitors into 85 accounts and 42 calls</b><br>The first campaign.</div>
+<div><b class="big">Over half the leads on-profile</b><br>For the first time.</div>
+<div><b class="big">Untracked traffic from 80 per cent to 20</b><br>With tracking set up before the spend.</div>
+</div>
+<div class="grid g2 shots"><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="grantify/home.jpg" aria-label="Enlarge screenshot: The Grantify homepage"><img src="grantify/home.jpg" alt="The Grantify homepage" loading="lazy" width="1600" height="1004"></button><figcaption>The Grantify homepage</figcaption></figure><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="grantify/landing.jpg" aria-label="Enlarge screenshot: A landing page for a single grant"><img src="grantify/landing.jpg" alt="A landing page for a single grant" loading="lazy" width="1600" height="1004"></button><figcaption>A landing page for a single grant</figcaption></figure></div>
+</div>
+<div data-panel="j" class="grid g2 shots-host" hidden>
+<div class="stack"><div class="kicker">JAA · Rapid scale</div><h2>Launched, tested and rolled out within a month</h2><p class="big">During Covid, JAA launched and grew Vycel, a commercial deep cleaning product that saw a massive opportunity.</p></div>
+<div class="rows">
+<div><b class="big">ROAS of 5.2</b><br>Return on ad spend.</div>
+<div><b class="big">Tested on LinkedIn first</b><br>To gauge interest and uptake.</div>
+<div><b class="big">Then rolled out by sector</b><br>Sector-specific messaging and targeting across trade press and digital audience builds, from banks to hairdressers to restaurants.</div>
+</div>
+<div class="grid g2 shots"><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="vycel/product.jpg" aria-label="Enlarge image: The Vycel sprayer"><img src="vycel/product.jpg" alt="The Vycel sprayer" loading="lazy" width="1600" height="900"></button><figcaption>The Vycel sprayer</figcaption></figure><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="vycel/site.jpg" aria-label="Enlarge image: The Vycel website"><img src="vycel/site.jpg" alt="The Vycel website" loading="lazy" width="1600" height="981"></button><figcaption>The Vycel website</figcaption></figure></div>
+</div>
+<div data-panel="j2" class="grid g2 shots-host" hidden>
+<div class="stack"><div class="kicker">JAA · Considered growth</div><h2>From a single LinkedIn approach to campaigns built by sector</h2><p class="big">CMI and Willis Towers Watson had the same dilemma. Both were relevant to specific jobs and industries, but had become too focused on building campaigns in LinkedIn.</p><p>JAA worked with them to analyse the data they already had i.e. which sectors were warmer, and which were an opportunity but needed more effort. That made the roll-out easier: sector-specific campaigns using the best opportunities for each sector, with a wider creative scope that allowed for more considered, long-term thinking.</p></div>
+<div class="rows">
+<div><b class="big">30% to 42% uplift in scale</b><br>The short-term effect, in both cases.</div>
+<div><b class="big">ROI of 2.5 to 2.9 over a year</b><br>The longer-term improvement.</div>
+</div>
+<div class="grid g2 shots"><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="wtw/article.jpg" aria-label="Enlarge screenshot: The WTW website"><img src="wtw/article.jpg" alt="The WTW website" loading="lazy" width="1600" height="931"></button><figcaption>The WTW website</figcaption></figure><figure class="slidefig"><button type="button" class="slidebtn" data-zoom="wtw/linkedin.jpg" aria-label="Enlarge screenshot: WTW's ads in the LinkedIn Ad Library"><img src="wtw/linkedin.jpg" alt="WTW's ads in the LinkedIn Ad Library" loading="lazy" width="1600" height="875"></button><figcaption>WTW's ads in the LinkedIn Ad Library</figcaption></figure></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page block t-petrol has-video deep" data-id="how-wed-run-it" data-title="03 How we'd run it" data-section="1">
+<video class="bgvideo" src="media/selling.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+<div class="inner">
+<div class="num">03</div>
+<h1 class="shout">How we'd run it.</h1>
+<p class="lead">Seven workstreams, how they run over six months and the risks we'd raise.</p>
+</div>
+</section>
+
+<section class="page" data-id="workstreams" data-title="Seven workstreams">
+<div class="inner">
+<div class="head"><span class="eyebrow">03 · How we'd run it</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Seven workstreams, <span class="slab">one team.</span></h1>
+<p class="lead">The three jobs break down into seven workstreams. We'd run them as one programme, because pricing, the self-serve journey and the conversion assumptions depend on each other. Select a workstream to see who does what.</p>
+<div data-tabs class="stack" style="gap:clamp(28px,3.4vw,48px)">
+<div class="md">
+<div class="tablist">
+<button type="button" data-tab="w1" aria-pressed="true">1 · SMB proposition, ICP and pricing</button>
+<button type="button" data-tab="w2" aria-pressed="false">2 · Self-serve product and onboarding</button>
+<button type="button" data-tab="w3" aria-pressed="false">3 · Website and commerce</button>
+<button type="button" data-tab="w4" aria-pressed="false">4 · Support and service model</button>
+<button type="button" data-tab="w5" aria-pressed="false">5 · Demand generation and launch</button>
+<button type="button" data-tab="w6" aria-pressed="false">6 · Funnel model and measurement</button>
+<button type="button" data-tab="w7" aria-pressed="false">7 · Operating model and handover</button>
+</div>
+<div>
+<div data-panel="w1" class="stack" style="gap:20px"><div class="kicker">Questions 01, 03 · Strategy</div><div class="grid g2"><div class="stack top"><div class="kicker">What we do</div><p>Define the SMB ICP, trial users and buyers, with JAA on audience. Develop the proposition and messaging. Design plans, tiers and price points.</p></div><div class="stack top"><div class="kicker">What you do</div><p>Share enterprise pricing, deal data and customer research under NDA. Sign off pricing and packaging.</p></div></div></div>
+<div data-panel="w2" class="stack" style="gap:20px" hidden><div class="kicker">Question 02 · Orchestration, Production</div><div class="grid g2"><div class="stack top"><div class="kicker">What we do</div><p>Map the enterprise and self-serve flows of work. Design the trial, onboarding, plan limits and upgrade prompts. Provide flows, prototypes and acceptance criteria.</p></div><div class="stack top"><div class="kicker">What you do</div><p>Build the changes in Mastry. Own the roadmap and release dates.</p></div></div></div>
+<div data-panel="w3" class="stack" style="gap:20px" hidden><div class="kicker">Question 04 · Orchestration, Production</div><div class="grid g2"><div class="stack top"><div class="kicker">What we do</div><p>Site architecture, SEO and AEO, pricing page, sign-up, payments and billing. Design and build, with analytics and attribution in place before launch.</p></div><div class="stack top"><div class="kicker">What you do</div><p>Provide access to the domain, payments provider and product APIs. Legal and finance sign-off on billing terms.</p></div></div></div>
+<div data-panel="w4" class="stack" style="gap:20px" hidden><div class="kicker">Question 07 · Orchestration, Production, Management</div><div class="grid g2"><div class="stack top"><div class="kicker">What we do</div><p>Design the SMB support model and its cost to serve. Select and set up tooling. Write help content. Define the route into your enterprise team.</p></div><div class="stack top"><div class="kicker">What you do</div><p>Decide the resourcing level. Staff the support team.</p></div></div></div>
+<div data-panel="w5" class="stack" style="gap:20px" hidden><div class="kicker">Question 05 · Activation, Management</div><div class="grid g2"><div class="stack top"><div class="kicker">What we do</div><p>Channel strategy, budget model, audiences, ABM, creative and landing pages. Direct JAA on media planning and buying.</p></div><div class="stack top"><div class="kicker">What you do</div><p>Approve budget. Brand and compliance sign-off.</p></div></div></div>
+<div data-panel="w6" class="stack" style="gap:20px" hidden><div class="kicker">Question 06 · Strategy, Optimisation</div><div class="grid g2"><div class="stack top"><div class="kicker">What we do</div><p>Build the conversion model, KPI framework and dashboards. Measure and adjust through the project.</p></div><div class="stack top"><div class="kicker">What you do</div><p>Share enterprise funnel data as a baseline. Agree the targets the programme is held to.</p></div></div></div>
+<div data-panel="w7" class="stack" style="gap:20px" hidden><div class="kicker">In-house resourcing · Management</div><div class="grid g2"><div class="stack top"><div class="kicker">What we do</div><p>Define the roles, documentation and tooling needed to run it. Phased handover.</p></div><div class="stack top"><div class="kicker">What you do</div><p>Hire or redeploy the team. Own the programme after handover.</p></div></div></div>
+</div>
+</div>
+<div class="flow stack" style="gap:16px">
+<div class="stack" style="gap:8px"><h2>The flow of work, step by step</h2><p>Each workstream breaks down into a handful of steps. This shows them in order, and who does each one.</p></div>
+<div class="fork" id="fork">
+<div class="fork-heads"><button type="button" data-tab="w1" aria-pressed="true"><span class="rn">1</span><span>Proposition, ICP and pricing</span></button><button type="button" data-tab="w2" aria-pressed="false"><span class="rn">2</span><span>Self-serve product</span></button><button type="button" data-tab="w3" aria-pressed="false"><span class="rn">3</span><span>Website and commerce</span></button><button type="button" data-tab="w4" aria-pressed="false"><span class="rn">4</span><span>Support</span></button><button type="button" data-tab="w5" aria-pressed="false"><span class="rn">5</span><span>Demand generation</span></button><button type="button" data-tab="w6" aria-pressed="false"><span class="rn">6</span><span>Funnel model</span></button><button type="button" data-tab="w7" aria-pressed="false"><span class="rn">7</span><span>Handover</span></button></div>
+<svg class="fork-lines" aria-hidden="true"></svg>
+<ol data-panel="w1" class="fork-steps" aria-label="Steps in workstream 1, in order"><li><span class="who"><i class="sw o-m"></i>You</span><span>Share enterprise pricing, deal data and customer research</span></li><li><span class="who"><i class="sw o-t"></i>Thrive with JAA</span><span>Define the ICP, trial users and buyers</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Develop the proposition and messaging</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Design plans, tiers and price points</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Sign off pricing and packaging</span></li></ol>
+<ol data-panel="w2" class="fork-steps" aria-label="Steps in workstream 2, in order" hidden><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Map the enterprise and self-serve flows of work</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Design the trial, onboarding, plan limits and upgrade prompts</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Provide flows, prototypes and acceptance criteria</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Build the changes in Mastry</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Release, on your roadmap and dates</span></li></ol>
+<ol data-panel="w3" class="fork-steps" aria-label="Steps in workstream 3, in order" hidden><li><span class="who"><i class="sw o-m"></i>You</span><span>Provide access to the domain, payments provider and product APIs</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Site architecture, SEO and AEO</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Design and build the pricing page, sign-up, payments and billing</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Legal and finance sign-off on billing terms</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Analytics and attribution in place before launch</span></li></ol>
+<ol data-panel="w4" class="fork-steps" aria-label="Steps in workstream 4, in order" hidden><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Design the support model and its cost to serve</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Decide the resourcing level</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Select and set up tooling</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Write help content</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Define the route into your enterprise team</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Staff the support team</span></li></ol>
+<ol data-panel="w5" class="fork-steps" aria-label="Steps in workstream 5, in order" hidden><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Channel strategy and budget model</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Approve budget</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Audiences, ABM, creative and landing pages</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Brand and compliance sign-off</span></li><li><span class="who"><i class="sw o-j"></i>JAA</span><span>Media planning and buying, directed by us</span></li></ol>
+<ol data-panel="w6" class="fork-steps" aria-label="Steps in workstream 6, in order" hidden><li><span class="who"><i class="sw o-m"></i>You</span><span>Share enterprise funnel data as a baseline</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Build the conversion model</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>KPI framework and dashboards</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Agree the targets the programme is held to</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Measure and adjust through the project</span></li></ol>
+<ol data-panel="w7" class="fork-steps" aria-label="Steps in workstream 7, in order" hidden><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Define the roles, documentation and tooling needed to run it</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Hire or redeploy the team</span></li><li><span class="who"><i class="sw o-t"></i>Thrive</span><span>Phased handover</span></li><li><span class="who"><i class="sw o-m"></i>You</span><span>Own the programme after handover</span></li></ol>
+</div>
+<div class="legend"><span><i class="sw o-t"></i>Thrive</span><span><i class="sw o-m"></i>You</span><span><i class="sw o-j"></i>JAA</span></div>
+<p class="muted small">The order of the steps is our starting view. Select a workstream in the list above or in the row of headings here, and both change together.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page" data-id="timeline" data-title="Over six months">
+<div class="inner">
+<div class="head"><span class="eyebrow">03 · How we'd run it</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Over <span class="slab">six months.</span></h1>
+<p class="lead">Six months is the example in your brief. The dates depend on the January enterprise launch, the SMB launch later in H1 and your product team's capacity.</p>
+<div><span class="tbc">Illustrative · Phasing TBC</span></div>
+<div class="hscroll" tabindex="0" role="group" aria-label="Illustrative timeline of the seven workstreams over six months">
+<div class="gantt">
+<div class="mh" style="grid-column:1"></div><div class="mh">Month 1</div><div class="mh">Month 2</div><div class="mh">Month 3</div><div class="mh">Month 4</div><div class="mh">Month 5</div><div class="mh">Month 6</div>
+<div class="lab"><b>1</b> SMB proposition, ICP and pricing</div><div class="bar jaa" style="grid-column:2 / 4"></div>
+<div class="lab"><b>2</b> Self-serve product and onboarding</div><div class="bar" style="grid-column:2 / 6"></div>
+<div class="lab"><b>3</b> Website and commerce</div><div class="bar" style="grid-column:3 / 7"></div>
+<div class="lab"><b>4</b> Support and service model</div><div class="bar" style="grid-column:4 / 8"></div>
+<div class="lab"><b>5</b> Demand generation and launch</div><div class="bar jaa" style="grid-column:4 / 8"></div>
+<div class="lab"><b>6</b> Funnel model and measurement</div><div class="bar" style="grid-column:2 / 8"></div>
+<div class="lab"><b>7</b> Operating model and handover</div><div class="bar" style="grid-column:5 / 8"></div>
+</div>
+</div>
+<p class="muted">The darker bars are delivered with JAA: audience in workstream 1 and media in workstream 5.</p>
+</div>
+</section>
+
+<section class="page" data-id="risks" data-title="Risks we'd raise">
+<div class="inner">
+<div class="head"><span class="eyebrow">03 · How we'd run it</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Risks <span class="slab">we'd raise.</span></h1>
+<p class="lead">The brief asks for the risks you haven't factored in.<br>These are our starting points.</p>
+<div class="stack card palewin" style="gap:12px"><div class="kicker">The biggest risk</div><h2>The work gets done and Mastry doesn't land with SMBs.</h2><p class="big">For us the biggest risk is that everything gets built and it doesn't resonate with small businesses, so they don't adopt it. We don't see why that would happen, because there are plenty of examples of other brands that have made this move, and Mastry feels like a remarkable product. It does mean the biggest task isn't building all of this. It's communicating it to SMBs in the right way.</p></div>
+<div class="kicker" style="margin-bottom:-12px">Other risks</div>
+<div class="rows">
+<div class="grid g2" style="gap:8px 44px"><b class="big">Your engineering capacity in H1</b><span>The self-serve changes are built by your product team, so their capacity decides the SMB launch date more than our six months does.</span></div>
+<div class="grid g2" style="gap:8px 44px"><b class="big">The brief doesn't ask how Mastry is positioned for SMBs</b><span>Six of the seven questions are about how to sell and support Mastry, and the other asks who to sell it to. None asks what Mastry is for a small business, or why they'd choose it. If that isn't agreed first, the pricing, the website and the ads will each describe a slightly different product. It's why we've made positioning the first of our three jobs.</span></div>
+<div class="grid g2" style="gap:8px 44px"><b class="big">Enterprise pricing and the SMB price</b><span>The SMB price needs to work for a small business without undercutting your enterprise contracts, or giving enterprise buyers a cheaper way in.</span></div>
+<div class="grid g2" style="gap:8px 44px"><b class="big">Spending ahead of the numbers</b><span>The cost to acquire a paying SMB customer isn't known until there's traffic, so media spend should follow the funnel model rather than a fixed launch budget.</span></div>
+<div class="grid g2" style="gap:8px 44px"><b class="big">The cost to serve</b><span>Support for each SMB customer has to cost less than the margin they bring in, which shapes the support model and the tooling.</span></div>
+</div>
+<a class="go" href="#who-sells-to-both" style="align-self:flex-start">From the wider industry: Salesforce and HubSpot</a>
+</div>
+</section>
+
+<section class="page block t-plum has-video" data-id="working-together" data-title="04 Working together" data-section="1">
+<video class="bgvideo" src="media/cover.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+<div class="inner">
+<div class="num">04</div>
+<h1 class="shout">Working together.</h1>
+<p class="lead">The team you'd work with, how we'd get started, the information we'd need from you and how the work moves in-house.</p>
+</div>
+</section>
+
+<section class="page" data-id="the-team" data-title="The team">
+<div class="inner">
+<div class="head"><span class="eyebrow">04 · Working together</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">The <span class="slab">team.</span></h1>
+<p class="lead">We've put together one team from two companies for this brief. Thrive leads the strategy, the product and service design and the build, and JAA leads media planning and buying. Each person is here because the brief needs what they do. Individual roles on the project <span class="tbc">TBC</span></p>
+<div class="stack" style="gap:16px;margin-top:clamp(12px,1.4vw,22px)">
+<div class="mark agency-logo">Thrive</div>
+<div class="kicker">Strategy, product and service design</div>
+<p>Thrive is a strategy company for organisations on the move.</p>
+<div class="grid people">
+<div class="person"><img class="photo" src="people/oliver-budworth.jpg" alt="Oliver Budworth" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Oliver Budworth</b><span>Founder, MD, Strategy Lead</span></div></div>
+<div class="person"><img class="photo" src="people/simon-evans.jpg" alt="Simon Evans" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Simon Evans</b><span>Founder, Client Lead</span></div></div>
+<div class="person"><img class="photo" src="people/beth-wilcock.jpg" alt="Beth Wilcock" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Beth Wilcock</b><span>Business Director</span></div></div>
+<div class="person"><img class="photo" src="people/angela-roche.jpg" alt="Angela Roche" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Angela Roche</b><span>Design Lead</span></div></div>
+<div class="person"><img class="photo" src="people/joe-plank.jpg" alt="Joe Plank" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Joe Plank</b><span>Software Engineering Lead</span></div></div>
+<div class="person"><img class="photo" src="people/ruby-pedwell.jpg" alt="Ruby Pedwell" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Ruby Pedwell</b><span>Strategy Associate</span></div></div>
+</div>
+</div>
+<div class="stack" style="gap:16px;margin-top:clamp(20px,2.4vw,36px)">
+<svg class="jaa-logo agency-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg>
+<div class="kicker">Media planning and buying</div>
+<p>JAA is an independent media agency and our media partner on larger programmes.</p>
+<div class="grid people">
+<div class="person jaa"><img class="photo" src="people/cameron-cumming.jpg" alt="Cameron Cumming" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Cameron Cumming</b><span>Managing Director</span></div></div>
+<div class="person jaa"><img class="photo" src="people/sarah-greaney.jpg" alt="Sarah Greaney" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Sarah Greaney</b><span>Director of Performance</span></div></div>
+<div class="person jaa"><img class="photo" src="people/nick-smith.jpg" alt="Nick Smith" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Nick Smith</b><span>Chief Digital &amp; AI Officer</span></div></div>
+<div class="person jaa"><img class="photo" src="people/lucy-smith.jpg" alt="Lucy Smith" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Lucy Smith</b><span>Head of Search, eCommerce and AEO</span></div></div>
+<div class="person jaa"><img class="photo" src="people/simmone-hallett.jpg" alt="Simmone Hallett" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Simmone Hallett</b><span>Business Director</span></div></div>
+<div class="person jaa"><img class="photo" src="people/louise-blood.jpg" alt="Louise Blood" width="96" height="96"><div class="stack" style="gap:4px"><b class="big">Louise Blood</b><span>Account Director</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page" data-id="getting-started" data-title="Getting started">
+<div class="inner">
+<div class="head"><span class="eyebrow">04 · Working together</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">From 'let's go' <span class="slab">to the work starting.</span></h1>
+<p class="lead">If you say 'let's go', this is what we'd do together before the workstreams start. It's the set-up for the project and it sits ahead of the six-month plan.</p>
+<span class="tbc" style="align-self:flex-start">Our starting view · timings TBC</span>
+<ol class="gs"><li><span class="gs-n">1</span><b class="big">NDA and information</b><span>You share the information listed on the 'What we'd need from you' page, under NDA.</span><span class="gs-out"><span class="kicker">Output</span>What we need to scope and cost the work</span></li><li><span class="gs-n">2</span><b class="big">Kick-off session</b><span>A working session with your product and marketing leads to go through the three jobs and agree what we scope first.</span><span class="gs-out"><span class="kicker">Output</span>Agreed priorities</span></li><li><span class="gs-n">3</span><b class="big">Scoping document</b><span>What's in and what's out, the deliverables for each workstream, what we need from your teams and the costs.</span><span class="gs-out"><span class="kicker">Output</span>Scope and costs for you to sign off</span></li><li><span class="gs-n">4</span><b class="big">RACI</b><span>Who is responsible, accountable, consulted and informed for each workstream, across Thrive, JAA and your teams.</span><span class="gs-out"><span class="kicker">Output</span>An agreed RACI</span></li><li><span class="gs-n">5</span><b class="big">Project plan</b><span>The phasing set against your January enterprise launch, the SMB launch later in H1 and your product team's capacity.</span><span class="gs-out"><span class="kicker">Output</span>A plan with dates and milestones</span></li><li><span class="gs-n">6</span><b class="big">Ways of working</b><span>How often we meet, how we report, the tools we share and who signs off what.</span><span class="gs-out"><span class="kicker">Output</span>Workstream 1 starts</span></li></ol>
+<div class="stack top-thin" style="gap:8px"><div class="kicker">What this gives you</div><p class="big">By the end of set-up you have a scope and costs you've signed off, a RACI that says who does what on both sides and a plan with dates.</p></div>
+</div>
+</section>
+
+<section class="page" data-id="what-we-need" data-title="What we need from you">
+<div class="inner">
+<div class="head"><span class="eyebrow">04 · Working together</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">What we need <span class="slab">from you.</span></h1>
+<p class="lead">To scope and cost the project we'd need the information below, under NDA.</p>
+<div class="grid g2" style="row-gap:0">
+<div class="rows">
+<div class="stack" style="gap:4px"><b>Mastry itself</b><span>A walkthrough of the product and how you'll sell it to enterprise from January.</span></div>
+<div class="stack" style="gap:4px"><b>Pricing and deals</b><span>Enterprise pricing, deal sizes and any win and loss data.</span></div>
+<div class="stack" style="gap:4px"><b>The funnel today</b><span>Enterprise funnel data to use as a baseline, and the targets the SMB programme will be held to.</span></div>
+<div class="stack" style="gap:4px"><b>Systems</b><span>The website platform, payments provider, CRM and support tooling you use today.</span></div>
+</div>
+<div class="rows">
+<div class="stack" style="gap:4px"><b>Your product team's H1</b><span>What's already on the roadmap, and who owns self-serve on your side.</span></div>
+<div class="stack" style="gap:4px"><b>Customers</b><span>Any research you have on enterprise customers and on SMBs.</span></div>
+<div class="stack" style="gap:4px"><b>Budget</b><span>The range you have in mind for the project and for launch media.</span></div>
+<div class="stack" style="gap:4px"><b>Your team</b><span>Who'd work on this from marketing, product and support, and how much time they have.</span></div>
+</div>
+</div>
+<div class="acid big">Next step <span class="tbc">TBC</span> e.g. a working session with your product and marketing leads to go through the three jobs and agree what we scope first.</div>
+</div>
+</section>
+
+<section class="page" data-id="running-it-in-house" data-title="Transition to in-house">
+<div class="inner">
+<div class="head"><span class="eyebrow">04 · Working together</span><span class="headmarks"><span class="mark">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></span></div>
+<h1 class="title">Running it <span class="slab">in-house.</span></h1>
+<p class="lead">The brief is clear that you want to run this long term with limited in-house resource, so handover isn't something we'd leave until month six. This is who runs each part, and how that changes.</p>
+<div class="stack" style="gap:10px"><div><span class="tbc">Our starting view · TBC</span></div>
+<div class="legend"><span><i class="sw o-t"></i>Thrive</span><span><i class="sw o-s"></i>Thrive and Multiverse</span><span><i class="sw o-m"></i>Multiverse</span><span><i class="sw o-j"></i>JAA</span><span><i class="sw chgkey"></i>Changes hands at this stage</span></div><button type="button" class="go" id="replayBuild">Replay the build</button></div>
+<div class="stack" style="gap:12px">
+<div class="layerhead"><h2>Now</h2><span class="kicker">While we set it up</span></div>
+<p>We run it with JAA while it's being set up. Your product team builds the changes to Mastry from the start, which is why that one is shared.</p>
+<div class="owngrid">
+<div class="own o-t"><b>Proposition and pricing</b><span class="who">Thrive</span></div>
+<div class="own o-s"><b>Self-serve product</b><span class="who">Thrive and Multiverse</span></div>
+<div class="own o-t"><b>Website and commerce</b><span class="who">Thrive</span></div>
+<div class="own o-t"><b>Support</b><span class="who">Thrive</span></div>
+<div class="own o-t"><b>Content and campaigns</b><span class="who">Thrive</span></div>
+<div class="own o-j"><b>Media buying</b><span class="who">JAA</span></div>
+<div class="own o-t"><b>Measurement</b><span class="who">Thrive</span></div>
+</div>
+</div>
+<div class="stack" style="gap:12px">
+<div class="layerhead"><h2>Immediate future</h2><span class="kicker">As each part is ready, through to handover</span></div>
+<p>Your team takes on the parts closest to the product and the customer. We stay alongside on the parts that are still being tuned.</p>
+<div class="owngrid">
+<div class="own o-m chg"><b>Proposition and pricing</b><span class="who">Multiverse</span></div>
+<div class="own o-m chg"><b>Self-serve product</b><span class="who">Multiverse</span></div>
+<div class="own o-s chg"><b>Website and commerce</b><span class="who">Thrive and Multiverse</span></div>
+<div class="own o-m chg"><b>Support</b><span class="who">Multiverse</span></div>
+<div class="own o-s chg"><b>Content and campaigns</b><span class="who">Thrive and Multiverse</span></div>
+<div class="own o-j"><b>Media buying</b><span class="who">JAA</span></div>
+<div class="own o-s chg"><b>Measurement</b><span class="who">Thrive and Multiverse</span></div>
+</div>
+</div>
+<div class="stack" style="gap:12px">
+<div class="layerhead"><h2>Longer term</h2><span class="kicker">After the project</span></div>
+<p>Your team runs the programme. We stay alongside on content and campaigns, where we can keep adding value. Media buying can stay with JAA or move in-house, and that choice is yours.</p>
+<div class="owngrid">
+<div class="own o-m"><b>Proposition and pricing</b><span class="who">Multiverse</span></div>
+<div class="own o-m"><b>Self-serve product</b><span class="who">Multiverse</span></div>
+<div class="own o-m chg"><b>Website and commerce</b><span class="who">Multiverse</span></div>
+<div class="own o-m"><b>Support</b><span class="who">Multiverse</span></div>
+<div class="own o-s"><b>Content and campaigns</b><span class="who">Thrive and Multiverse</span></div>
+<div class="own o-j"><b>Media buying</b><span class="who">JAA</span></div>
+<div class="own o-m chg"><b>Measurement</b><span class="who">Multiverse</span></div>
+</div>
+</div>
+<div class="grid g2">
+<div class="card stack"><b class="big">Media buying</b><span>Some things cost less to leave with a specialist. We'd set out the options with JAA, including a roadmap for what you could take in-house. JAA's view <span class="tbc">TBC</span></span></div>
+<div class="acid stack"><b class="big">What you'd need to hire or redeploy</b><span>Our view of the roles needed to run it, covering marketing, product, support and data. The roles and the time each needs depend on who owns self-serve at Multiverse today <span class="tbc">TBC</span></span></div>
+</div>
+</div>
+</section>
+
+<section class="page block t-forest has-video" data-id="thank-you" data-title="Thank you">
+<video class="bgvideo" src="media/cover.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+<div class="inner">
+<div class="marks"><span class="mark" style="font-size:2.75rem">Thrive</span><svg class="jaa-logo" role="img" aria-label="JAA" viewBox="0 0 106.6 53.05"><use href="#jaaLogo"/></svg></div>
+<div class="stack" style="gap:20px">
+<h1 class="shout">Thank you.</h1>
+<p class="lead">We'd welcome the chance to talk this through with you and your team.</p>
+</div>
+<div class="stack" style="gap:6px">
+<div class="kicker">Prepared by Thrive and JAA for Multiverse · November 2026</div>
+</div>
+<div class="stack" style="gap:12px">
+<div class="kicker">Who to contact</div>
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px">
+<div class="stack" style="gap:2px;align-items:flex-start;align-self:auto;text-align:left"><b style="color:inherit">Oliver Budworth</b><span class="small">Managing Director, Thrive</span><a class="small" style="color:inherit" href="mailto:oliver@andwethrive.co.uk">oliver@andwethrive.co.uk</a></div>
+<div class="stack" style="gap:2px;align-items:flex-start;align-self:auto;text-align:left"><b style="color:inherit">Simon Evans</b><span class="small">Client Lead, Thrive</span><a class="small" style="color:inherit" href="mailto:simon@andwethrive.co.uk">simon@andwethrive.co.uk</a></div>
+<div class="stack" style="gap:2px;align-items:flex-start;align-self:auto;text-align:left"><b style="color:inherit">Cameron Cumming</b><span class="small">Managing Director, JAA</span><a class="small" style="color:inherit" href="mailto:ccumming@jaa-media.co.uk">ccumming@jaa-media.co.uk</a></div>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<div class="marker" aria-hidden="true"><span id="markName"></span><span id="markPage"></span></div>
+<dialog id="zoom" aria-label="Slide, enlarged"><img alt=""></dialog>
+<div class="menu" id="menu" role="listbox" aria-label="Pages" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<nav class="docnav" aria-label="Document">
+<button type="button" id="prev" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<button type="button" class="trigger" id="trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="menu"><span id="triggerLabel"></span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
+<span class="count" id="count" aria-hidden="true"></span>
+<button type="button" class="edit" id="editBtn" hidden>Edit</button>
+<button type="button" class="edit save" id="saveBtn" hidden>Save</button>
+<button type="button" class="edit" id="cancelBtn" hidden>Cancel</button>
+<button type="button" id="themeBtn" aria-label="Switch to dark mode" title="Light or dark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
+<button type="button" id="next" aria-label="Next page"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+<button type="button" class="backbtn" id="backBtn" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h9a5 5 0 0 1 0 10h-3"/></svg><span id="backLabel"></span></button>
+</nav>
+</div>
+
+<script>
+(function(){
+  var deck = document.getElementById('deck'), track = document.getElementById('track');
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var prev = document.getElementById('prev'), next = document.getElementById('next');
+  var trigger = document.getElementById('trigger'), menu = document.getElementById('menu');
+  var cur = 0;
+
+  pages.forEach(function(p, i){
+    var b = document.createElement('button');
+    b.type = 'button'; b.setAttribute('role', 'option');
+    if (p.dataset.section) b.className = 'sec';
+    var n = document.createElement('span'); n.className = 'n'; n.textContent = i + 1;
+    var t = document.createElement('span'); t.textContent = p.dataset.title;
+    b.appendChild(n); b.appendChild(t);
+    b.addEventListener('click', function(){ closeMenu(); go(i); });
+    menu.appendChild(b);
+  });
+
+  function indexOf(id){ for (var i = 0; i < pages.length; i++) if (pages[i].dataset.id === id) return i; return -1; }
+
+  // After a jump of more than one page, a button offers the way back to where the reader was.
+  var started = false, backTo = -1, goingBack = false, backBtn = document.getElementById('backBtn');
+  function show(i){
+    var was = cur;
+    cur = Math.max(0, Math.min(pages.length - 1, i));
+    backTo = (started && !goingBack && Math.abs(cur - was) > 1) ? was : -1;
+    goingBack = false; started = true;
+    backBtn.hidden = backTo < 0;
+    if (backTo >= 0) document.getElementById('backLabel').textContent = 'Back to ' + pages[backTo].dataset.title;
+    track.style.transform = 'translateX(' + (-cur * 100) + '%)';
+    pages.forEach(function(p, k){ p.inert = k !== cur; p.setAttribute('aria-hidden', k !== cur ? 'true' : 'false'); });
+    var p = pages[cur];
+    document.getElementById('triggerLabel').textContent = p.dataset.title;
+    trigger.setAttribute('aria-label', 'Jump to page, now ' + p.dataset.title);
+    document.getElementById('count').textContent = (cur + 1) + '/' + pages.length;
+    document.getElementById('markName').textContent = cur === 0 ? '' : p.dataset.title;
+    document.getElementById('markPage').textContent = 'Page ' + (cur + 1) + '/' + pages.length;
+    deck.style.setProperty('--marker', getComputedStyle(p).color);
+    document.querySelector('.marker').hidden = !p.classList.contains('block');
+    if (p.dataset.id === 'running-it-in-house' && !deck.classList.contains('editing')) build(p);
+    if (p.dataset.id === 'the-opportunity' && !p.dataset.played && !deck.classList.contains('editing')) { p.dataset.played = '1'; p.classList.add('playing'); }
+    if (F) { if (p.dataset.id === 'funnel-model') F.start(); else F.stop(); }
+    Array.prototype.forEach.call(p.querySelectorAll('[data-tabs]'), function(r){ if (!r.dataset.nudged) { r.dataset.nudged = '1'; r.classList.add('nudge'); } });
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    Array.prototype.forEach.call(document.querySelectorAll('.bgvideo'), function(v){
+      if (p.contains(v) && !still) { var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); } else v.pause();
+    });
+    prev.disabled = cur === 0; next.disabled = cur === pages.length - 1;
+    Array.prototype.forEach.call(menu.children, function(b, k){ b.setAttribute('aria-current', k === cur ? 'true' : 'false'); b.setAttribute('aria-selected', k === cur ? 'true' : 'false'); });
+  }
+  function build(p){
+    p.classList.remove('building');
+    Array.prototype.forEach.call(p.querySelectorAll('.owngrid'), function(g, L){
+      g.parentElement.style.setProperty('--d', (0.5 + L * 1.7) + 's');
+      Array.prototype.forEach.call(g.querySelectorAll('.own'), function(c, n){ c.style.setProperty('--c', n); });
+    });
+    void p.offsetWidth;
+    p.classList.add('building');
+  }
+  document.getElementById('replayBuild').addEventListener('click', function(){ var pg = this.closest('.page'); pg.scrollTop = 0; build(pg); });
+  function go(i){
+    i = Math.max(0, Math.min(pages.length - 1, i));
+    var id = pages[i].dataset.id;
+    if (location.hash.slice(1) === id) show(i); else location.hash = id;
+  }
+  function fromHash(){ var i = indexOf(location.hash.slice(1)); show(i < 0 ? 0 : i); }
+  window.addEventListener('hashchange', fromHash);
+  backBtn.addEventListener('click', function(){ if (backTo >= 0) { goingBack = true; go(backTo); } });
+
+  prev.addEventListener('click', function(){ go(cur - 1); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function(b){ b.addEventListener('click', function(){ go(cur + Number(b.dataset.go)); }); });
+  next.addEventListener('click', function(){ go(cur + 1); });
+
+  function openMenu(){ menu.hidden = false; trigger.setAttribute('aria-expanded', 'true'); var c = menu.children[cur]; if (c) { c.scrollIntoView({block: 'nearest'}); c.focus(); } }
+  function closeMenu(){ if (menu.hidden) return; menu.hidden = true; trigger.setAttribute('aria-expanded', 'false'); }
+  trigger.addEventListener('click', function(){ if (menu.hidden) openMenu(); else closeMenu(); });
+  document.addEventListener('click', function(e){ if (!menu.hidden && !menu.contains(e.target) && !trigger.contains(e.target)) closeMenu(); });
+
+  document.addEventListener('keydown', function(e){
+    if (e.target && e.target.isContentEditable) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var sel = window.getSelection();
+        if (sel && sel.rangeCount) {
+          var rg = sel.getRangeAt(0), br = document.createElement('br');
+          rg.deleteContents(); rg.insertNode(br); rg.setStartAfter(br); rg.collapse(true);
+          sel.removeAllRanges(); sel.addRange(rg);
+        }
+      }
+      return;
+    }
+    if (e.key === 'Escape' && !menu.hidden) { closeMenu(); trigger.focus(); return; }
+    if (!menu.hidden) {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        var items = Array.prototype.slice.call(menu.children), k = items.indexOf(document.activeElement);
+        k = e.key === 'ArrowDown' ? Math.min(items.length - 1, k + 1) : Math.max(0, k - 1);
+        items[k].focus(); e.preventDefault();
+      }
+      return;
+    }
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === 'ArrowRight') { go(cur + 1); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft') { go(cur - 1); e.preventDefault(); }
+  });
+
+  var sx = null, sy = null;
+  track.addEventListener('touchstart', function(e){
+    if (e.touches.length !== 1 || e.target.closest('.hscroll')) { sx = null; return; }
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+  }, {passive: true});
+  track.addEventListener('touchend', function(e){
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; sx = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+  }, {passive: true});
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tabs]'), function(root){
+    var tabs = root.querySelectorAll('[data-tab]'), panels = root.querySelectorAll('[data-panel]'), cells = root.querySelectorAll('[data-stage]');
+    Array.prototype.forEach.call(tabs, function(t, n){
+      t.style.setProperty('--i', n);
+      t.addEventListener('click', function(){
+        root.classList.remove('nudge');
+        var key = t.dataset.tab;
+        Array.prototype.forEach.call(tabs, function(o){ o.setAttribute('aria-pressed', o.dataset.tab === key ? 'true' : 'false'); });
+        Array.prototype.forEach.call(panels, function(p){ p.hidden = p.dataset.panel !== key; });
+        Array.prototype.forEach.call(cells, function(c){ c.classList.toggle('on', c.dataset.stage === key); });
+      });
+    });
+  });
+
+  // Editing copy in place. Edits are kept in copy.json beside the page, keyed by page and block, so the page source stays as written.
+  var OKTAG = {B: 1, STRONG: 1, I: 1, EM: 1, SPAN: 1, BR: 1, A: 1};
+  var blocks = [], src = {}, edits = {}, snap = null, art = null;
+  var nav = document.querySelector('.docnav'), toast = document.getElementById('toast');
+  var editBtn = document.getElementById('editBtn'), saveBtn = document.getElementById('saveBtn'), cancelBtn = document.getElementById('cancelBtn');
+  function hasText(el){ for (var n = el.firstChild; n; n = n.nextSibling) if (n.nodeType === 3 && n.nodeValue.trim()) return true; return false; }
+  function clean(html){
+    var t = document.createElement('template'); t.innerHTML = html;
+    var els = t.content.querySelectorAll('*');
+    for (var i = els.length - 1; i >= 0; i--) {
+      var e = els[i];
+      if (!OKTAG[e.tagName]) { e.replaceWith(document.createTextNode(' ' + e.textContent)); continue; }
+      Array.prototype.slice.call(e.attributes).forEach(function(a){
+        var ok = a.name === 'class' || (a.name === 'href' && /^(#[\w-]*$|https:\/\/)/.test(a.value));
+        if (!ok) e.removeAttribute(a.name);
+      });
+    }
+    return t.innerHTML;
+  }
+  pages.forEach(function(p){
+    var k = 0;
+    Array.prototype.forEach.call(p.querySelectorAll('*'), function(el){
+      if (el.closest('button,a,svg,video,.mark,[data-edit]') || !hasText(el)) return;
+      el.dataset.edit = p.dataset.id + ':' + (k++);
+      blocks.push(el); src[el.dataset.edit] = el.innerHTML;
+    });
+  });
+  function applyEdits(){ blocks.forEach(function(el){ var e = edits[el.dataset.edit]; if (e && e.from === src[el.dataset.edit]) el.innerHTML = clean(e.to); }); }
+  fetch('copy.json', {cache: 'no-store'}).then(function(r){ return r.ok ? r.json() : {}; }).then(function(j){ if (j && typeof j === 'object' && !editing()) { edits = j; applyEdits(); } }).catch(function(){});
+  function editing(){ return deck.classList.contains('editing'); }
+  function say(msg){ toast.textContent = msg; toast.hidden = false; clearTimeout(say.t); say.t = setTimeout(function(){ toast.hidden = true; }, 6000); }
+  function setEditing(on){
+    deck.classList.toggle('editing', on); nav.classList.toggle('is-editing', on);
+    editBtn.hidden = on; saveBtn.hidden = !on; cancelBtn.hidden = !on;
+    if (on) snap = {};
+    blocks.forEach(function(el){
+      if (on) {
+        snap[el.dataset.edit] = el.innerHTML;
+        el.setAttribute('contenteditable', 'plaintext-only');
+        if (el.contentEditable !== 'plaintext-only') el.setAttribute('contenteditable', 'true');
+      } else el.removeAttribute('contenteditable');
+    });
+  }
+  editBtn.addEventListener('click', function(){ closeMenu(); setEditing(true); say('Click any text to change it, then save.'); });
+  cancelBtn.addEventListener('click', function(){ blocks.forEach(function(el){ el.innerHTML = snap[el.dataset.edit]; }); setEditing(false); });
+  saveBtn.addEventListener('click', function(){
+    var next = {}, k;
+    for (k in edits) next[k] = edits[k];
+    blocks.forEach(function(el){
+      var key = el.dataset.edit, cur = clean(el.innerHTML);
+      if (cur === clean(src[key])) delete next[key]; else next[key] = {from: src[key], to: cur};
+    });
+    saveBtn.disabled = true;
+    art.publish({'copy.json': {content: JSON.stringify(next), contentType: 'application/json'}}).then(function(){
+      edits = next; setEditing(false); say('Saved.');
+    }, function(err){
+      var c = err && err.code;
+      say(c === 'not_writer' || c === 'not_granted' ? 'You have view access, so edits can’t be saved here.'
+        : c === 'capability_disabled' ? 'Saving isn’t available in this view. Your edits are still on the page.'
+        : c === 'conflict' ? 'Someone else saved first. The page will reload with their version.'
+        : 'Couldn’t save. Your edits are still on the page.');
+    }).then(function(){ saveBtn.disabled = false; });
+  });
+  if (window.claude && window.claude.use) window.claude.use('artifact').then(function(a){ if (!a) return; art = a; editBtn.hidden = false; nav.classList.add('can-edit'); }).catch(function(){});
+
+  // Light and dark: the button sets data-theme on the root and remembers the choice for this reader.
+  window.isDark = function(){
+    var t = document.documentElement.getAttribute('data-theme');
+    return t ? t === 'dark' : !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  };
+  (function(){
+    var btn = document.getElementById('themeBtn'), saved = null;
+    try { saved = localStorage.getItem('mastry-theme'); } catch (e) {}
+    if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    function label(){ btn.setAttribute('aria-label', window.isDark() ? 'Switch to light mode' : 'Switch to dark mode'); }
+    label();
+    btn.addEventListener('click', function(){
+      var next = window.isDark() ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('mastry-theme', next); } catch (e) {}
+      label();
+      var cur = document.querySelector('.page:not([inert])');
+      if (cur && cur.getAttribute('data-id') === 'funnel-model' && typeof F !== 'undefined' && F) F.start();
+    });
+  })();
+  // The 3D funnel on the funnel model page. It is drawn on a 2D canvas with its own projection, so it needs no library.
+  var F = (function(){
+    var cv = document.getElementById('f3dCanvas');
+    if (!cv || !cv.getContext) return null;
+    var ctx = cv.getContext('2d'), wrap = document.getElementById('f3d'), notes = wrap.querySelectorAll('.f3d-note');
+    var SEG = [[2.2, 1.7, [225, 209, 249]], [1.62, 1.2, [196, 164, 242]], [1.13, 0.8, [144, 84, 234]], [0.74, 0.5, [113, 32, 229]]];
+    var H = 1, GAP = 0.16, TOTAL = 4 * H + 3 * GAP, INK = [35, 34, 32], WHITE = [255, 255, 255], RULE = [218, 215, 206];
+    var W = 0, Hh = 0, S = 1, cx = 0, cy = 0, pitch = 0.4, tPitch = 0.4, light = 0.3, tLight = 0.3, active = -1, t0 = 0, raf = 0, lastT = 9;
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var narrow = window.matchMedia ? window.matchMedia('(max-width:820px)') : {matches: false};
+    var FG = INK, RL = RULE;
+    function mix(a, b, t){ return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t]; }
+    function col(c, a){ return 'rgba(' + Math.round(c[0]) + ',' + Math.round(c[1]) + ',' + Math.round(c[2]) + ',' + (a === undefined ? 1 : a) + ')'; }
+    function ease(k){ k = Math.max(0, Math.min(1, k)); return 1 - Math.pow(1 - k, 3); }
+    // a small fixed pseudo-random sequence, so the dots look the same on every load
+    var seed = 7; function rnd(){ seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    var parts = [], i, g;
+    for (i = 0; i < 90; i++) parts.push({k: 'in', th: rnd() * 6.283, r: 0.9 + rnd() * 2.1, sp: 0.16 + rnd() * 0.12, ph: rnd()});
+    for (g = 0; g < 3; g++) for (i = 0; i < [26, 14, 7][g]; i++) parts.push({k: 'drop', g: g, th: rnd() * 6.283, sp: 0.22 + rnd() * 0.16, ph: rnd()});
+    for (i = 0; i < 8; i++) parts.push({k: 'out', th: rnd() * 6.283, r: rnd() * 0.3, sp: 0.3 + rnd() * 0.2, ph: rnd()});
+
+    function Y(yd){ return cy + (yd - TOTAL / 2) * S * Math.cos(pitch); }
+    function segTop(n){ return n * (H + GAP); }
+    function size(){
+      var r = cv.getBoundingClientRect(), dpr = Math.min(2, window.devicePixelRatio || 1);
+      W = r.width; Hh = r.height;
+      if (!W || !Hh) return;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(Hh * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      S = Math.min(W / 6.4, Hh / ((TOTAL + 3.1) * Math.cos(0.4)));
+      cx = narrow.matches ? W / 2 : W * 0.44; cy = Hh / 2 + 0.6 * S;
+    }
+    function dot(r, th, yd, rad, c, a){
+      if (a <= 0.01) return;
+      ctx.beginPath();
+      ctx.arc(cx + r * S * Math.cos(th), Y(yd) + r * S * Math.sin(pitch) * Math.sin(th), rad, 0, 6.283);
+      ctx.fillStyle = col(c, a); ctx.fill();
+    }
+    function particles(t, front){
+      parts.forEach(function(p){
+        var k = (t * p.sp + p.ph) % 1, th, a;
+        if (p.k === 'in') {
+          if (!front) return;
+          th = p.th + k * 1.3;
+          a = Math.min(1, k * 6) * Math.min(1, (1 - k) * 5);
+          dot(p.r + (Math.min(p.r * 0.5, 1.6) - p.r) * k, th, -1.6 + k * 1.75, 2.4, SEG[2][2], a * 0.9);
+        } else if (p.k === 'drop') {
+          th = p.th + k * 0.5;
+          if ((Math.sin(th) > 0) !== front) return;
+          dot(SEG[p.g][1] + 0.1 + k * 1.2, th, segTop(p.g) + H + GAP / 2 + k * 0.55, 2.2, FG, (1 - k) * 0.42);
+        } else {
+          if (!front) return;
+          dot(p.r, p.th, TOTAL + 0.05 + k * 0.9, 2.6, SEG[3][2], 1 - k);
+        }
+      });
+    }
+    function segment(n, t){
+      var s = SEG[n], b = ease((t - n * 0.16) / 0.7), drop = (1 - b) * -1.1;
+      if (b <= 0) return;
+      var yt = Y(segTop(n) + drop), yb = Y(segTop(n) + H + drop), sp = Math.sin(pitch);
+      var rxT = s[0] * S, ryT = rxT * sp, rxB = s[1] * S, ryB = rxB * sp;
+      var base = n === active ? mix(s[2], WHITE, 0.18) : s[2];
+      ctx.globalAlpha = b;
+      // the wall facing us
+      var gr = ctx.createLinearGradient(cx - rxT, 0, cx + rxT, 0);
+      gr.addColorStop(0, col(mix(base, INK, 0.3)));
+      gr.addColorStop(Math.max(0.08, Math.min(0.6, light)), col(mix(base, WHITE, 0.32)));
+      gr.addColorStop(0.72, col(base));
+      gr.addColorStop(1, col(mix(base, INK, 0.38)));
+      ctx.beginPath();
+      ctx.ellipse(cx, yt, rxT, ryT, 0, Math.PI, 0, true);
+      ctx.lineTo(cx + rxB, yb);
+      ctx.ellipse(cx, yb, rxB, ryB, 0, 0, Math.PI, false);
+      ctx.closePath();
+      ctx.fillStyle = gr; ctx.fill();
+      if (n === active) { ctx.lineWidth = 1.5; ctx.strokeStyle = col(FG, 0.8); ctx.stroke(); }
+      // the opening, looking down into it
+      var go = ctx.createLinearGradient(0, yt - ryT, 0, yt + ryT);
+      go.addColorStop(0, col(mix(base, INK, 0.22)));
+      go.addColorStop(1, col(mix(base, INK, 0.5)));
+      ctx.beginPath(); ctx.ellipse(cx, yt, rxT, ryT, 0, 0, 6.283); ctx.fillStyle = go; ctx.fill();
+      ctx.lineWidth = 1.5; ctx.strokeStyle = col(mix(base, WHITE, 0.45)); ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+    function draw(t){
+      lastT = t;
+      if (!W || !Hh) { size(); if (!W || !Hh) return; }
+      ctx.clearRect(0, 0, W, Hh);
+      if (window.isDark && window.isDark()) { FG = [245, 242, 234]; RL = [69, 65, 60]; } else { FG = INK; RL = RULE; }
+      pitch += (tPitch - pitch) * (still ? 1 : 0.08); light += (tLight - light) * (still ? 1 : 0.08);
+      var n, ym, x0, sh = ctx.createRadialGradient(cx, Y(TOTAL + 0.75), 0, cx, Y(TOTAL + 0.75), 1.7 * S);
+      sh.addColorStop(0, col(INK, 0.13)); sh.addColorStop(1, col(INK, 0));
+      ctx.save(); ctx.translate(0, Y(TOTAL + 0.75)); ctx.scale(1, Math.sin(pitch)); ctx.translate(0, -Y(TOTAL + 0.75));
+      ctx.fillStyle = sh; ctx.fillRect(cx - 2 * S, Y(TOTAL + 0.75) - 2 * S, 4 * S, 4 * S); ctx.restore();
+      particles(t, false);
+      for (n = 3; n >= 0; n--) segment(n, t);
+      particles(t, true);
+      for (n = 0; n < 4; n++) {
+        ym = Y(segTop(n) + H / 2);
+        if (!narrow.matches) {
+          x0 = cx + (SEG[n][0] + SEG[n][1]) / 2 * S + 10;
+          ctx.globalAlpha = ease((t - 0.5 - n * 0.16) / 0.5);
+          ctx.beginPath(); ctx.moveTo(x0, ym); ctx.lineTo(W, ym);
+          ctx.lineWidth = 1; ctx.strokeStyle = n === active ? col(FG) : col(RL); ctx.stroke();
+          ctx.beginPath(); ctx.arc(x0, ym, 3, 0, 6.283); ctx.fillStyle = col(FG, n === active ? 1 : 0.7); ctx.fill();
+          ctx.globalAlpha = 1;
+          notes[n].style.top = ym + 'px';
+        } else notes[n].style.top = '';
+        notes[n].classList.toggle('on', n === active);
+      }
+    }
+    function frame(now){ draw((now - t0) / 1000); raf = requestAnimationFrame(frame); }
+    function redraw(){ if (!raf) draw(lastT); }
+    function hit(e){
+      var r = cv.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top, n, found = -1;
+      for (n = 0; n < 4; n++) {
+        var yt = Y(segTop(n)), yb = Y(segTop(n) + H) + SEG[n][1] * S * Math.sin(pitch);
+        if (my >= yt - 4 && my <= yb && Math.abs(mx - cx) <= SEG[n][0] * S) found = n;
+      }
+      active = found; redraw();
+    }
+    cv.addEventListener('pointermove', hit);
+    cv.addEventListener('pointerleave', function(){ active = -1; tPitch = 0.4; tLight = 0.3; redraw(); });
+    Array.prototype.forEach.call(notes, function(el, n){
+      el.addEventListener('pointerenter', function(){ active = n; redraw(); });
+      el.addEventListener('pointerleave', function(){ active = -1; redraw(); });
+    });
+    if (window.ResizeObserver) new ResizeObserver(function(){ size(); redraw(); }).observe(cv);
+    else window.addEventListener('resize', function(){ size(); redraw(); });
+    return {
+      start: function(){
+        size();
+        if (still) { draw(9); return; }
+        if (raf) cancelAnimationFrame(raf);
+        t0 = performance.now(); raf = requestAnimationFrame(frame);
+      },
+      stop: function(){ if (raf) cancelAnimationFrame(raf); raf = 0; }
+    };
+  })();
+
+  Array.prototype.forEach.call(document.querySelectorAll('.fork-steps'), function(l){ Array.prototype.forEach.call(l.children, function(c, n){ c.style.setProperty('--n', n); }); });
+  // The fork on the workstreams page: a line drops from the selected heading and branches to each step.
+  (function(){
+    var fork = document.getElementById('fork'); if (!fork) return;
+    var svg = fork.querySelector('.fork-lines'), NS = 'http://www.w3.org/2000/svg';
+    function draw(){
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      var head = fork.querySelector('.fork-heads [aria-pressed="true"]'), list = fork.querySelector('.fork-steps:not([hidden])');
+      if (!head || !list || getComputedStyle(svg).display === 'none') return;
+      var f = fork.getBoundingClientRect(), h = head.getBoundingClientRect(), k = f.width / (fork.offsetWidth || f.width) || 1;
+      var x0 = (h.left - f.left) / k + h.width / k / 2, y0 = (h.bottom - f.top) / k;
+      var xs = [], y1 = 0;
+      Array.prototype.forEach.call(list.children, function(li){ var r = li.getBoundingClientRect(); xs.push((r.left - f.left) / k + 5); y1 = (r.top - f.top) / k - 8; });
+      if (!xs.length) return;
+      var ym = Math.round((y0 + y1) / 2), d = 'M' + x0 + ' ' + y0 + 'V' + ym + 'M' + Math.min(x0, xs[0]) + ' ' + ym + 'H' + Math.max(x0, xs[xs.length - 1]);
+      xs.forEach(function(x){ d += 'M' + x + ' ' + ym + 'V' + y1; });
+      var p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); svg.appendChild(p);
+    }
+    var root = fork.closest('[data-tabs]');
+    root.addEventListener('click', function(){ requestAnimationFrame(draw); });
+    if (window.ResizeObserver) new ResizeObserver(draw).observe(fork); else window.addEventListener('resize', draw);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+    draw();
+  })();
+  // slides open larger in a dialog; a click anywhere or Escape closes it
+  (function(){
+    var z = document.getElementById('zoom'); if (!z || !z.showModal) return;
+    var zi = z.querySelector('img');
+    document.addEventListener('click', function(e){
+      var b = e.target.closest && e.target.closest('[data-zoom]');
+      if (b) { zi.src = b.getAttribute('data-zoom'); zi.alt = b.querySelector('img').alt; z.showModal(); }
+      else if (z.open && z.contains(e.target)) z.close();
+    });
+    z.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') e.stopPropagation(); });
+  })();
+  // long tail chart: pointing at a block or its label highlights the pair
+  Array.prototype.forEach.call(document.querySelectorAll('#tail [data-b]'), function(el){
+    function set(on){ Array.prototype.forEach.call(document.querySelectorAll('#tail [data-b="' + el.dataset.b + '"]'), function(o){ o.classList.toggle('on', on); }); }
+    el.addEventListener('pointerenter', function(){ set(true); }); el.addEventListener('pointerleave', function(){ set(false); });
+    el.addEventListener('focus', function(){ set(true); }); el.addEventListener('blur', function(){ set(false); });
+  });
+
+  var tr = track.style.transition; track.style.transition = 'none';
+  fromHash();
+  requestAnimationFrame(function(){ track.style.transition = tr; });
+})();
+</script>
+
+</body></html>
